@@ -1,0 +1,16 @@
+{
+  "model_name": "labTensileAvg_lgbm_v1",
+  "target_name": "labTensileAvg",
+  "algorithm": "lgbm",
+  "feature_count": 30,
+  "training_timestamp": "2026-05-13T07:13:15.932336Z",
+  "notes": "MDF1 LightGBM model with engineered features",
+  "pipeline_type": "single_target_regression",
+  "split_type": "time_based",
+  "forced_production_features": [
+    "operCookingTime",
+    "operFibresDensity",
+    "operPressFibreDensity",
+    "pressPressureMid_mean"
+  ]
+}

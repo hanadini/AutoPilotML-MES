@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 30px;
+            color: #222;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .top-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #1f4e79;
+            font-weight: bold;
+        }
+
+        .filter-bar,
+        .card {
+            background: white;
+            padding: 18px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .filter-buttons a,
+        .replay-btn {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            padding: 10px 14px;
+            text-decoration: none;
+            border-radius: 8px;
+            background: #1f4e79;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .filter-buttons a:hover,
+        .replay-btn:hover {
+            background: #173a5c;
+        }
+
+        .timestamp {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-top: 15px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .box {
+            background: #f7f9fc;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .target-card {
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .risk-low,
+        .green {
+            border-left: 6px solid #0a7a28;
+            background: #eef9f0;
+        }
+
+        .risk-medium,
+        .yellow {
+            border-left: 6px solid #d4a017;
+            background: #fff8e5;
+        }
+
+        .risk-high,
+        .red {
+            border-left: 6px solid #b42318;
+            background: #fdecec;
+        }
+
+        .target-title {
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .value {
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        .empty {
+            color: #777;
+        }
+
+        .status-line {
+            font-size: 14px;
+            color: #555;
+            margin-top: 8px;
+        }
+
+        .filter-note {
+            margin-top: 8px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .feature-title {
+            font-weight: bold;
+            margin-top: 8px;
+            margin-bottom: 4px;
+            color: #1f4e79;
+        }
+
+        .forced-feature {
+            background: #fff8e5;
+            border-left: 4px solid #d4a017;
+            padding: 6px;
+            border-radius: 6px;
+        }
+
+        .meta {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.45;
+        }
+    </style>
+</head>
+
+<body>
+
+<a class="top-link" href="/">← Back to Home</a>
+
+<h1>📊 Simulation / Prediction History</h1>
+
+<div class="filter-bar">
+    <strong>Filters</strong>
+
+    <div class="status-line">
+        Current:
+        Risk = {{ selected_risk or "All" }},
+        Target = {{ selected_target_label or selected_target or "All" }},
+        Limit = {{ selected_limit }}
+    </div>
+
+    <div class="filter-buttons" style="margin-top: 12px;">
+        <a href="/history">All</a>
+        <a href="/history?risk=HIGH">High Risk</a>
+        <a href="/history?risk=MEDIUM">Medium Risk</a>
+        <a href="/history?risk=LOW">Low Risk</a>
+
+        {% for limit in allowed_limits %}
+            <a href="/history?limit={{ limit }}">Last {{ limit }} Runs</a>
+        {% endfor %}
+
+        {% for target in target_options %}
+            <a href="/history?target={{ target.name }}">
+                {{ target.label }} Only
+            </a>
+        {% endfor %}
+    </div>
+
+    <div class="filter-note">
+        Risk and target filters are applied to recommendation and prediction records.
+    </div>
+</div>
+
+{% if history %}
+
+    {% for item in history %}
+
+        <div class="card">
+
+            <div class="timestamp">
+                {{ item.timestamp_formatted }}
+                {% if item.mode %}
+                    | Mode: {{ item.mode }}
+                {% endif %}
+                {% if item.source %}
+                    | Source: {{ item.source }}
+                {% endif %}
+            </div>
+
+            <div class="grid section">
+
+                <div class="box">
+                    <strong>Baseline / Input Features</strong>
+
+                    {% set baseline = item.baseline or item.features or {} %}
+
+                    {% if baseline %}
+                        {% for feature_name, feature_value in baseline.items() %}
+                            <div class="value">
+                                {{ feature_name }}:
+                                {{ feature_value if feature_value is not none else "N/A" }}
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <p class="empty">No baseline/input features available.</p>
+                    {% endif %}
+                </div>
+
+                <div class="box">
+                    <strong>Scenario Features</strong>
+
+                    {% set scenario = item.scenario or {} %}
+
+                    {% if scenario %}
+                        {% for feature_name, feature_value in scenario.items() %}
+                            <div class="value">
+                                {{ feature_name }}:
+                                {{ feature_value if feature_value is not none else "N/A" }}
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <p class="empty">No scenario features available.</p>
+                    {% endif %}
+                </div>
+
+            </div>
+
+            {% if item.predictions %}
+                <div class="section">
+                    <strong>Predictions</strong>
+
+                    {% for target, prediction_item in item.predictions.items() %}
+                        {% set risk_level = prediction_item.get("risk_level", "LOW") %}
+                        {% set risk = risk_level.lower() %}
+                        {% set target_label = prediction_item.get("target_label", target) %}
+
+                        <div class="target-card risk-{{ risk }}">
+                            <div class="target-title">
+                                {{ target_label }}
+                            </div>
+
+                            <div class="value">
+                                Prediction:
+                                {% if prediction_item.get("prediction_display_value") %}
+                                    {{ prediction_item.get("prediction_display_value") }}
+                                {% else %}
+                                    {{ "%.3f"|format(prediction_item.get("prediction", 0)) }}
+                                {% endif %}
+                            </div>
+
+                            <div class="value">
+                                Risk:
+                                {% if risk_level == "LOW" %}
+                                    🟢 LOW
+                                {% elif risk_level == "MEDIUM" %}
+                                    🟡 MEDIUM
+                                {% elif risk_level == "HIGH" %}
+                                    🔴 HIGH
+                                {% else %}
+                                    {{ risk_level }}
+                                {% endif %}
+                            </div>
+
+                            <div class="meta">
+                                Model:
+                                {{ prediction_item.get("model_name")
+                                   or prediction_item.get("artifact_model_name")
+                                   or "N/A" }}
+                                <br>
+                                Algorithm:
+                                {{ prediction_item.get("algorithm_name") or "N/A" }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            {% if item.comparison %}
+                <div class="section">
+                    <strong>Simulation Comparison</strong>
+
+                    {% for target, comparison_item in item.comparison.items() %}
+                        {% set risk_level = comparison_item.get("risk_level", "LOW") %}
+                        {% set risk = risk_level.lower() %}
+                        {% set target_label = comparison_item.get("target_label", target) %}
+
+                        <div class="target-card risk-{{ risk }}">
+                            <div class="target-title">
+                                {{ target_label }}
+                            </div>
+
+                            <div class="value">
+                                Baseline:
+                                {{ "%.3f"|format(comparison_item.get("baseline_prediction", 0)) }}
+                            </div>
+
+                            <div class="value">
+                                Scenario:
+                                {{ "%.3f"|format(comparison_item.get("scenario_prediction", 0)) }}
+                            </div>
+
+                            <div class="value">
+                                Delta:
+                                {{ "%.3f"|format(comparison_item.get("delta", 0)) }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <div class="section">
+                <strong>AI Recommendation</strong>
+
+                {% if item.recommendations %}
+                    {% for target, rec in item.recommendations.items() %}
+                        {% set risk_level = rec.risk_level or "LOW" %}
+                        {% set risk = risk_level.lower() %}
+                        {% set target_label = rec.target_label or target %}
+
+                        <div class="target-card risk-{{ risk }}">
+                            <div class="target-title">
+                                {{ target_label }}
+                            </div>
+
+                            <div class="value">
+                                Action:
+                                {{ rec.recommended_action or "—" }}
+                            </div>
+
+                            {% if rec.impact_value is defined and rec.impact_value is not none %}
+                                <div class="value">
+                                    Impact:
+                                    {{ "%.3f"|format(rec.impact_value) }}
+                                </div>
+                            {% endif %}
+
+                            <div class="value">
+                                Risk:
+                                {% if risk_level == "LOW" %}
+                                    🟢 LOW
+                                {% elif risk_level == "MEDIUM" %}
+                                    🟡 MEDIUM
+                                {% elif risk_level == "HIGH" %}
+                                    🔴 HIGH
+                                {% else %}
+                                    {{ risk_level }}
+                                {% endif %}
+                            </div>
+
+                            <div class="value">
+                                {{ rec.message }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p class="empty">
+                        No recommendation card matched the selected filters.
+                    </p>
+                {% endif %}
+            </div>
+
+            <a class="replay-btn" href="/history/replay?timestamp={{ item.timestamp | urlencode }}">
+                Replay This Scenario
+            </a>
+
+        </div>
+
+    {% endfor %}
+
+{% else %}
+
+    <p class="empty">No history matched the selected filters.</p>
+
+{% endif %}
+
+</body>
+</html>

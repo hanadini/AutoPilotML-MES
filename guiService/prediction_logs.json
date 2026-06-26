@@ -1,0 +1,4087 @@
+[
+  {
+    "timestamp": "2026-04-17T16:29:23.618587",
+    "baseline": {
+      "rawThickness": 14.3,
+      "beltSpeed1": 22.3,
+      "pressPressureGlobal_mean": 148.1
+    },
+    "scenario": {
+      "rawThickness": 15.3,
+      "beltSpeed1": 22.3,
+      "pressPressureGlobal_mean": 148.1
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.4646606445312,
+        "delta": -0.0970458984375
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 40.28629360708409,
+        "delta": -1.0380380320382585
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382585
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382585,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382585
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-17T16:29:35.776537",
+    "baseline": {
+      "rawThickness": 14.3,
+      "beltSpeed1": 22.3,
+      "pressPressureGlobal_mean": 148.1
+    },
+    "scenario": {
+      "rawThickness": 14.3,
+      "beltSpeed1": 22.3,
+      "pressPressureGlobal_mean": 148.1
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.5617065429688,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 41.32433163912235,
+        "delta": 0.0
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382656
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382656,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382656
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-17T16:29:45.788115",
+    "baseline": {
+      "rawThickness": 14.3,
+      "beltSpeed1": 22.3,
+      "pressPressureGlobal_mean": 148.1
+    },
+    "scenario": {
+      "rawThickness": 16.3,
+      "beltSpeed1": 22.3,
+      "pressPressureGlobal_mean": 148.1
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.4646606445312,
+        "delta": -0.0970458984375
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 37.45142308980258,
+        "delta": -3.8729085493197672
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382727
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-17T16:38:32.437270",
+    "baseline": {
+      "rawThickness": 14.3,
+      "beltSpeed1": 22.3,
+      "pressPressureGlobal_mean": 148.1
+    },
+    "scenario": {
+      "rawThickness": 16.3,
+      "beltSpeed1": 22.3,
+      "pressPressureGlobal_mean": 148.1
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.4646606445312,
+        "delta": -0.0970458984375
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 37.451423089802574,
+        "delta": -3.8729085493197744
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382585
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382585,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382585
+        },
+        {
+          "label": "pressPressureGlobal_mean - 5",
+          "delta": -7.105427357601002e-15
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-17T16:39:08.830922",
+    "baseline": {
+      "rawThickness": 14.3,
+      "beltSpeed1": 22.3,
+      "pressPressureGlobal_mean": 148.1
+    },
+    "scenario": {
+      "rawThickness": 16.3,
+      "beltSpeed1": 22.3,
+      "pressPressureGlobal_mean": 148.1
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.4646606445312,
+        "delta": -0.0970458984375
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 37.451423089802574,
+        "delta": -3.8729085493197744
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382727
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-17T16:39:58.300683",
+    "baseline": {
+      "rawThickness": 14.3,
+      "beltSpeed1": 22.3,
+      "pressPressureGlobal_mean": 148.1
+    },
+    "scenario": {
+      "rawThickness": 16.3,
+      "beltSpeed1": 22.3,
+      "pressPressureGlobal_mean": 148.1
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.4646606445312,
+        "delta": -0.0970458984375
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 37.451423089802574,
+        "delta": -3.8729085493197744
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382656
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382656,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382656
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-17T16:39:59.548981",
+    "baseline": {
+      "rawThickness": 14.3,
+      "beltSpeed1": 22.3,
+      "pressPressureGlobal_mean": 148.1
+    },
+    "scenario": {
+      "rawThickness": 16.3,
+      "beltSpeed1": 22.3,
+      "pressPressureGlobal_mean": 148.1
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.4646606445312,
+        "delta": -0.0970458984375
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 37.451423089802574,
+        "delta": -3.8729085493197744
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382727
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-17T16:40:47.802622",
+    "baseline": {
+      "rawThickness": 14.2,
+      "beltSpeed1": 25.3,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "scenario": {
+      "rawThickness": 14.2,
+      "beltSpeed1": 25.3,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.5617065429688,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 41.32433163912235,
+        "delta": 0.0
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382585
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382585,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382585
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-17T17:10:19.615164",
+    "baseline": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.5,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "scenario": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.5,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.5617065429688,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 41.32433163912235,
+        "delta": 0.0
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382727
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-17T17:15:28.397590",
+    "baseline": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.5,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "scenario": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.5,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.5617065429688,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 41.32433163912235,
+        "delta": 0.0
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382727
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-20T09:37:23.243452",
+    "baseline": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.5,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "scenario": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.5,
+      "pressPressureGlobal_mean": 180.0
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.5617065429688,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 41.32433163912235,
+        "delta": 0.0
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382727
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-20T09:38:21.524287",
+    "baseline": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.5,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "scenario": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.5,
+      "pressPressureGlobal_mean": 180.0
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.5617065429688,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 41.32433163912235,
+        "delta": 0.0
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382656
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382656,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382656
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-20T09:41:13.464012",
+    "baseline": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.5,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "scenario": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.5,
+      "pressPressureGlobal_mean": 180.0
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.5617065429688,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 41.32433163912235,
+        "delta": 0.0
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382656
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382656,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382656
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-20T09:47:29.938461",
+    "baseline": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.5,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "scenario": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.5,
+      "pressPressureGlobal_mean": 180.0
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.5617065429688,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 41.32433163912235,
+        "delta": 0.0
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382656
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382656,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382656
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-20T10:04:18.802303",
+    "baseline": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.5,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "scenario": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.5,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.5617065429688,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 41.32433163912235,
+        "delta": 0.0
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382727
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-20T10:04:38.105667",
+    "baseline": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.0,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "scenario": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 27.0,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.5617065429688,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 41.32433163912235,
+        "delta": 0.0
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382727
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-20T10:04:42.737057",
+    "baseline": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.0,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "scenario": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 27.0,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.5617065429688,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 41.32433163912235,
+        "delta": 0.0
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382585
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382585,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382585
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-20T10:04:43.820832",
+    "baseline": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.0,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "scenario": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 27.0,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.5617065429688,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 41.32433163912235,
+        "delta": 0.0
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382727
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-20T10:04:50.780467",
+    "baseline": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.0,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "scenario": {
+      "rawThickness": 19.1,
+      "beltSpeed1": 27.0,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 750.1502685546875,
+        "delta": -3.41143798828125
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 35.05068555203367,
+        "delta": -6.273646087088679
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382727
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-20T10:52:22.811064",
+    "baseline": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 20.4,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "scenario": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 23.4,
+      "pressPressureGlobal_mean": 146.1
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.5617065429688,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 41.32433163912235,
+        "delta": 0.0
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382727,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382727
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-20T10:52:32.624289",
+    "baseline": {
+      "rawThickness": 14.1,
+      "beltSpeed1": 20.4,
+      "pressPressureGlobal_mean": 149.1
+    },
+    "scenario": {
+      "rawThickness": 16.1,
+      "beltSpeed1": 23.4,
+      "pressPressureGlobal_mean": 146.1
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 753.5617065429688,
+        "scenario_prediction": 753.4646606445312,
+        "delta": -0.0970458984375
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 41.32433163912235,
+        "scenario_prediction": 37.451423089802574,
+        "delta": -3.8729085493197744
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382585
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.0970458984375,
+        "risk_level": "green",
+        "message": "Moderate density adjustment possible."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.0380380320382585,
+        "risk_level": "red",
+        "message": "Strong improvement potential for bending strength."
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -0.0970458984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.0380380320382585
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-27T10:50:17.425235",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 13.2,
+      "pressPressureGlobal_mean": 142.1
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986256,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T10:50:19.694993",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 13.2,
+      "pressPressureGlobal_mean": 142.1
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T10:50:23.910805",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 13.2,
+      "pressPressureGlobal_mean": 142.1
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T10:50:25.870154",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 13.2,
+      "pressPressureGlobal_mean": 142.1
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T10:50:26.745777",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 13.2,
+      "pressPressureGlobal_mean": 142.1
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T10:50:27.373122",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 13.2,
+      "pressPressureGlobal_mean": 142.1
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986256,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T10:51:59.056770",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 13.2,
+      "pressPressureGlobal_mean": 142.1
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986256,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T10:55:19.804319",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 31.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986256,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T10:55:24.213449",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 31.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T10:55:24.781480",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 31.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T10:59:34.521501",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 31.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986256,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T10:59:36.334136",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 31.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T10:59:37.340246",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 31.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T11:03:37.408753",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 31.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T11:03:40.597375",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 31.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986256,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T11:04:35.594928",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 31.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986256,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T11:06:46.744745",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 31.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T11:07:32.476592",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 31.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T11:08:11.658167",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 31.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986256,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T11:14:25.288663",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 31.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986256,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T11:23:09.905789",
+    "source": "gui",
+    "mode": "what_if_simulation",
+    "features": null,
+    "baseline": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 33.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "scenario": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 33.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "predictions": null,
+    "baseline_predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986256,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "scenario_predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 751.6365356445312,
+        "scenario_prediction": 751.6365356445312,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 34.69403154986256,
+        "scenario_prediction": 34.69403154986255,
+        "delta": -7.105427357601002e-15
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.48626708984375,
+        "risk_level": "red",
+        "message": "Strong density impact — verify upper limits before applying."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.3566540021711191,
+        "risk_level": "yellow",
+        "message": "Minor improvement possible."
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.48626708984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.3566540021711191
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.48626708984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": 0.3566540021711191
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.01833933962263501
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": -7.105427357601002e-15
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": -7.105427357601002e-15
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": -7.105427357601002e-15
+        }
+      ]
+    },
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T11:45:50.797147",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 13.2,
+      "beltSpeed1": 33.1,
+      "pressPressureGlobal_mean": 142.1
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 753.5617065429688,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 41.32433163912235,
+        "risk_level": "LOW"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T11:57:34.452926",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 13.2,
+      "beltSpeed1": 33.1,
+      "pressPressureGlobal_mean": 142.1
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 753.5617065429688,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 41.32433163912235,
+        "risk_level": "LOW"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T11:57:38.054775",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 13.2,
+      "beltSpeed1": 33.1,
+      "pressPressureGlobal_mean": 142.1
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 753.5617065429688,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 41.32433163912235,
+        "risk_level": "LOW"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T11:57:45.891314",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 13.2,
+      "beltSpeed1": 33.1,
+      "pressPressureGlobal_mean": 142.1
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 753.5617065429688,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 41.32433163912235,
+        "risk_level": "LOW"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T11:57:49.321928",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 13.2,
+      "beltSpeed1": 33.1,
+      "pressPressureGlobal_mean": 142.1
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 753.5617065429688,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 41.32433163912235,
+        "risk_level": "LOW"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T11:57:51.242178",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 13.2,
+      "beltSpeed1": 33.1,
+      "pressPressureGlobal_mean": 142.1
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 753.5617065429688,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 41.32433163912235,
+        "risk_level": "LOW"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T12:19:32.991774",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 13.2,
+      "beltSpeed1": 33.1,
+      "pressPressureGlobal_mean": 142.1
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 753.5617065429688,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 41.32433163912235,
+        "risk_level": "LOW"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T12:19:34.440356",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 13.2,
+      "beltSpeed1": 33.1,
+      "pressPressureGlobal_mean": 142.1
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 753.5617065429688,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 41.32433163912234,
+        "risk_level": "LOW"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T12:19:36.547595",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 13.2,
+      "beltSpeed1": 33.1,
+      "pressPressureGlobal_mean": 142.1
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 753.5617065429688,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 41.32433163912235,
+        "risk_level": "LOW"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T12:19:53.686401",
+    "source": "gui",
+    "mode": "what_if_simulation",
+    "features": null,
+    "baseline": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 33.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "scenario": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 33.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "predictions": null,
+    "baseline_predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "scenario_predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986256,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 751.6365356445312,
+        "scenario_prediction": 751.6365356445312,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 34.69403154986255,
+        "scenario_prediction": 34.69403154986256,
+        "delta": 7.105427357601002e-15
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.48626708984375,
+        "risk_level": "red",
+        "message": "Strong density impact — verify upper limits before applying."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.3566540021711262,
+        "risk_level": "yellow",
+        "message": "Minor improvement possible."
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.48626708984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.3566540021711262
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.48626708984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": 0.3566540021711262
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.018339339622642115
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 7.105427357601002e-15
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 7.105427357601002e-15
+        },
+        {
+          "label": "beltSpeed1 - 5",
+          "delta": 7.105427357601002e-15
+        }
+      ]
+    },
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T12:19:57.692470",
+    "source": "gui",
+    "mode": "what_if_simulation",
+    "features": null,
+    "baseline": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 33.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "scenario": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 33.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "predictions": null,
+    "baseline_predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "scenario_predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 751.6365356445312,
+        "scenario_prediction": 751.6365356445312,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 34.69403154986255,
+        "scenario_prediction": 34.69403154986255,
+        "delta": 0.0
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.48626708984375,
+        "risk_level": "red",
+        "message": "Strong density impact — verify upper limits before applying."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.3566540021711191,
+        "risk_level": "yellow",
+        "message": "Minor improvement possible."
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.48626708984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.3566540021711191
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.48626708984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": 0.3566540021711191
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.018339339622642115
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 7.105427357601002e-15
+        },
+        {
+          "label": "pressPressureGlobal_mean - 5",
+          "delta": 7.105427357601002e-15
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        }
+      ]
+    },
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T12:19:59.328015",
+    "source": "gui",
+    "mode": "what_if_simulation",
+    "features": null,
+    "baseline": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 33.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "scenario": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 33.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "predictions": null,
+    "baseline_predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986256,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "scenario_predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986256,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 751.6365356445312,
+        "scenario_prediction": 751.6365356445312,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 34.69403154986256,
+        "scenario_prediction": 34.69403154986256,
+        "delta": 0.0
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.48626708984375,
+        "risk_level": "red",
+        "message": "Strong density impact — verify upper limits before applying."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.3566540021711191,
+        "risk_level": "yellow",
+        "message": "Minor improvement possible."
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.48626708984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.3566540021711191
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.48626708984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": 0.3566540021711191
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.01833933962263501
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": -7.105427357601002e-15
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": -7.105427357601002e-15
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": -7.105427357601002e-15
+        }
+      ]
+    },
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T12:19:59.468551",
+    "source": "gui",
+    "mode": "what_if_simulation",
+    "features": null,
+    "baseline": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 33.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "scenario": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 33.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "predictions": null,
+    "baseline_predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "scenario_predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 751.6365356445312,
+        "scenario_prediction": 751.6365356445312,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 34.69403154986255,
+        "scenario_prediction": 34.69403154986255,
+        "delta": 0.0
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.48626708984375,
+        "risk_level": "red",
+        "message": "Strong density impact — verify upper limits before applying."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.3566540021711262,
+        "risk_level": "yellow",
+        "message": "Minor improvement possible."
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.48626708984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.3566540021711262
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.48626708984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": 0.3566540021711262
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.018339339622642115
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": -7.105427357601002e-15
+        },
+        {
+          "label": "pressPressureGlobal_mean + 10",
+          "delta": 7.105427357601002e-15
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        }
+      ]
+    },
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T12:48:33.030715",
+    "source": "gui",
+    "mode": "what_if_simulation",
+    "features": null,
+    "baseline": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 33.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "scenario": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 33.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "predictions": null,
+    "baseline_predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986256,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "scenario_predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 751.6365356445312,
+        "scenario_prediction": 751.6365356445312,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 34.69403154986256,
+        "scenario_prediction": 34.69403154986255,
+        "delta": -7.105427357601002e-15
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.48626708984375,
+        "risk_level": "red",
+        "message": "Strong density impact — verify upper limits before applying."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.3566540021711191,
+        "risk_level": "yellow",
+        "message": "Minor improvement possible."
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.48626708984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.3566540021711191
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.48626708984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": 0.3566540021711191
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.018339339622642115
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": -7.105427357601002e-15
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": -7.105427357601002e-15
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": -7.105427357601002e-15
+        }
+      ]
+    },
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T12:48:55.089509",
+    "source": "gui",
+    "mode": "manual_prediction",
+    "features": {
+      "rawThickness": 13.1,
+      "beltSpeed1": 31.2,
+      "pressPressureGlobal_mean": 142.1
+    },
+    "baseline": null,
+    "scenario": null,
+    "predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 753.5617065429688,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 41.32433163912235,
+        "risk_level": "LOW"
+      }
+    },
+    "baseline_predictions": null,
+    "scenario_predictions": null,
+    "comparison": null,
+    "recommendations": null,
+    "sensitivity_summary": null,
+    "mini_trend_data": null,
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T12:49:06.900345",
+    "source": "gui",
+    "mode": "what_if_simulation",
+    "features": null,
+    "baseline": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 33.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "scenario": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 33.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "predictions": null,
+    "baseline_predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "scenario_predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 751.6365356445312,
+        "scenario_prediction": 751.6365356445312,
+        "delta": 0.0
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 34.69403154986255,
+        "scenario_prediction": 34.69403154986255,
+        "delta": 0.0
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.48626708984375,
+        "risk_level": "red",
+        "message": "Strong density impact — verify upper limits before applying."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.3566540021711262,
+        "risk_level": "yellow",
+        "message": "Minor improvement possible."
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.48626708984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.3566540021711262
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.48626708984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": 0.3566540021711262
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.01833933962264922
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 7.105427357601002e-15
+        },
+        {
+          "label": "beltSpeed1 - 5",
+          "delta": 7.105427357601002e-15
+        },
+        {
+          "label": "pressPressureGlobal_mean + 10",
+          "delta": 7.105427357601002e-15
+        }
+      ]
+    },
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  },
+  {
+    "timestamp": "2026-04-27T12:49:17.704458",
+    "source": "gui",
+    "mode": "what_if_simulation",
+    "features": null,
+    "baseline": {
+      "rawThickness": 18.2,
+      "beltSpeed1": 33.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "scenario": {
+      "rawThickness": 22.2,
+      "beltSpeed1": 33.2,
+      "pressPressureGlobal_mean": 142.5
+    },
+    "predictions": null,
+    "baseline_predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 751.6365356445312,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 34.69403154986255,
+        "risk_level": "MEDIUM"
+      }
+    },
+    "scenario_predictions": {
+      "labDensityAverage": {
+        "model_name": "labDensityAverage_xgb_tuned_v2",
+        "algorithm_name": "xgb",
+        "prediction": 750.1502685546875,
+        "risk_level": "MEDIUM"
+      },
+      "labBendingAvg": {
+        "model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+        "algorithm_name": "ensemble_xgb_rf",
+        "prediction": 35.05068555203367,
+        "risk_level": "LOW"
+      }
+    },
+    "comparison": {
+      "labDensityAverage": {
+        "baseline_prediction": 751.6365356445312,
+        "scenario_prediction": 750.1502685546875,
+        "delta": -1.48626708984375
+      },
+      "labBendingAvg": {
+        "baseline_prediction": 34.69403154986255,
+        "scenario_prediction": 35.05068555203367,
+        "delta": 0.3566540021711191
+      }
+    },
+    "recommendations": {
+      "labDensityAverage": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 1.48626708984375,
+        "risk_level": "red",
+        "message": "Strong density impact — verify upper limits before applying."
+      },
+      "labBendingAvg": {
+        "recommended_action": "rawThickness + 1.0",
+        "impact_value": 0.3566540021711191,
+        "risk_level": "yellow",
+        "message": "Minor improvement possible."
+      }
+    },
+    "sensitivity_summary": {
+      "labDensityAverage": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 1.48626708984375
+      },
+      "labBendingAvg": {
+        "most_impactful_change": "rawThickness + 1.0",
+        "impact_value": 0.3566540021711191
+      }
+    },
+    "mini_trend_data": {
+      "labDensityAverage": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": -1.48626708984375
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 10",
+          "delta": 0.0
+        }
+      ],
+      "labBendingAvg": [
+        {
+          "label": "rawThickness + 1.0",
+          "delta": 0.3566540021711191
+        },
+        {
+          "label": "rawThickness - 0.5",
+          "delta": 0.018339339622642115
+        },
+        {
+          "label": "beltSpeed1 - 5",
+          "delta": 7.105427357601002e-15
+        },
+        {
+          "label": "rawThickness + 0.5",
+          "delta": 0.0
+        },
+        {
+          "label": "beltSpeed1 + 5",
+          "delta": 0.0
+        }
+      ]
+    },
+    "actual_values": null,
+    "prediction_errors": null,
+    "model_version": null
+  }
+]

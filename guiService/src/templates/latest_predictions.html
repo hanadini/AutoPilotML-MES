@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+
+    <meta http-equiv="refresh" content="{{ refresh_seconds or 10 }}">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f7f9fc;
+            color: #222;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .top-bar {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 16px;
+            background: #1f4e79;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .button:hover {
+            background: #173a5c;
+        }
+
+        .filters {
+            display: flex;
+            gap: 16px;
+            align-items: end;
+            margin: 20px 0;
+            padding: 16px;
+            background: #eef4fa;
+            border-radius: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        select {
+            padding: 8px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+            min-width: 180px;
+        }
+
+        .filter-button {
+            padding: 9px 16px;
+            border: none;
+            border-radius: 6px;
+            background: #1f4e79;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .kpi-row {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(160px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .kpi-card {
+            background: #f8fbff;
+            border-left: 5px solid #1f4e79;
+            padding: 16px;
+            border-radius: 10px;
+        }
+
+        .kpi-card.danger {
+            border-left-color: #b42318;
+        }
+
+        .kpi-title {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .kpi-value {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 18px;
+        }
+
+        th {
+            background: #1f4e79;
+            color: white;
+            padding: 10px;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            vertical-align: top;
+        }
+
+        tr:hover {
+            background: #f1f5fb;
+        }
+
+        .prediction-high {
+            color: #b42318;
+            font-weight: bold;
+        }
+
+        .prediction-warning {
+            color: #c48a00;
+            font-weight: bold;
+        }
+
+        .prediction-normal {
+            color: #0a7a28;
+            font-weight: bold;
+        }
+
+        .row-alert {
+            background-color: #ffe5e5;
+        }
+
+        .row-warning {
+            background-color: #fff5cc;
+        }
+
+        .feature-box {
+            margin-top: 10px;
+            background: #f9fafc;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 13px;
+        }
+
+        .feature-title {
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #1f4e79;
+        }
+
+        .feature-line {
+            margin-bottom: 4px;
+        }
+
+        .forced-feature {
+            border-left: 4px solid #d4a017;
+            padding-left: 6px;
+            background: #fff8e5;
+            border-radius: 4px;
+        }
+
+        .risk-high {
+            color: #b42318;
+            font-weight: bold;
+        }
+
+        .risk-medium {
+            color: #c48a00;
+            font-weight: bold;
+        }
+
+        .risk-low {
+            color: #0a7a28;
+            font-weight: bold;
+        }
+
+        .recommendation-box {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            background: #f7f9fc;
+            border-left: 5px solid #1f4e79;
+        }
+
+        .recommendation-title {
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .driver-list {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .driver-list li {
+            margin-bottom: 4px;
+        }
+
+        .traceability {
+            font-size: 12px;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        .empty-state {
+            margin-top: 24px;
+            padding: 20px;
+            background: #f7f9fc;
+            border-radius: 10px;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1>{{ title }}</h1>
+
+    <div class="top-bar">
+        <a class="button" href="/">Back Home</a>
+        <a class="button" href="/manual-prediction">Manual Prediction</a>
+        <a class="button" href="/simulation">What-if Simulation</a>
+        <a class="button" href="/history">History</a>
+    </div>
+
+    <form class="filters" method="get" action="/latest-predictions">
+
+        <div class="filter-group">
+            <label>Target</label>
+
+            <select name="target">
+                <option value="" {% if selected_target =="" %}selected{% endif %}>All</option>
+
+                {% for target in target_options %}
+                    <option value="{{ target.name }}"
+                        {% if selected_target == target.name %}selected{% endif %}>
+                        {{ target.label }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label>Source</label>
+
+            <select name="source">
+                <option value="" {% if selected_source =="" %}selected{% endif %}>All</option>
+
+                <option value="GUIService"
+                    {% if selected_source =="GUIService" %}selected{% endif %}>
+                    GUI Service
+                </option>
+
+                <option value="Swagger-Test"
+                    {% if selected_source =="Swagger-Test" %}selected{% endif %}>
+                    Swagger Test
+                </option>
+
+                <option value="PredictionService"
+                    {% if selected_source =="PredictionService" %}selected{% endif %}>
+                    Prediction Service
+                </option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label>Time</label>
+
+            <select name="time_range">
+                <option value="10min" {% if selected_time_range =="10min" %}selected{% endif %}>Last 10 min</option>
+                <option value="1h" {% if selected_time_range =="1h" %}selected{% endif %}>Last 1 hour</option>
+                <option value="shift1" {% if selected_time_range =="shift1" %}selected{% endif %}>Shift 1</option>
+                <option value="shift2" {% if selected_time_range =="shift2" %}selected{% endif %}>Shift 2</option>
+                <option value="shift3" {% if selected_time_range =="shift3" %}selected{% endif %}>Shift 3</option>
+                <option value="all" {% if selected_time_range =="all" %}selected{% endif %}>All</option>
+            </select>
+        </div>
+
+        <button class="filter-button" type="submit">Apply</button>
+    </form>
+
+    <div class="kpi-row">
+
+        <div class="kpi-card">
+            <div class="kpi-title">Total Predictions</div>
+            <div class="kpi-value">{{ kpi.total_predictions }}</div>
+        </div>
+
+        <div class="kpi-card">
+            <div class="kpi-title">Average Density</div>
+            <div class="kpi-value">{{ kpi.avg_density or "N/A" }}</div>
+        </div>
+
+        <div class="kpi-card">
+            <div class="kpi-title">Average Bending</div>
+            <div class="kpi-value">{{ kpi.avg_bending or "N/A" }}</div>
+        </div>
+
+        <div class="kpi-card danger">
+            <div class="kpi-title">High Risk Count</div>
+            <div class="kpi-value">{{ kpi.high_risk_count }}</div>
+        </div>
+
+    </div>
+
+    {% if rows %}
+
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Time</th>
+            <th>Board</th>
+            <th>Target</th>
+            <th>Prediction</th>
+            <th>Details</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for row in rows %}
+
+        <tr class="{{ row.row_status_class or '' }}">
+
+            <td>{{ row.id }}</td>
+
+            <td>{{ row.created_at }}</td>
+
+            <td>{{ row.board_id or "N/A" }}</td>
+
+            <td>{{ row.target_label or row.target_name }}</td>
+
+            <td class="{{ row.prediction_status_class or 'prediction-normal' }}">
+                {{ row.prediction_display_value or "%.2f"|format(row.prediction_value) }}
+            </td>
+
+            <td>
+
+                {% if row.control_features %}
+
+                    <div class="feature-box">
+                        <div class="feature-title">
+                            Production / Control Features
+                        </div>
+
+                        {% for feature_name, feature_info in row.control_features.items() %}
+                            <div class="feature-line {% if feature_info.is_forced_production_feature %}forced-feature{% endif %}">
+                                {{ feature_info.label }}:
+                                {{ feature_info.value }}
+
+                                {% if feature_info.unit %}
+                                    {{ feature_info.unit }}
+                                {% endif %}
+
+                                {% if feature_info.is_forced_production_feature %}
+                                    ⭐
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                {% endif %}
+
+                {% if row.explanations %}
+
+                    <div class="feature-box">
+                        <div class="feature-title">
+                            Top Prediction Drivers
+                        </div>
+
+                        <ul class="driver-list">
+                            {% for item in row.explanations[:5] %}
+                                <li>
+                                    {{ item.feature }}
+                                    →
+                                    {{ "%.3f"|format(item.impact) }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                {% endif %}
+
+                {% if row.recommendations %}
+
+                    <div class="recommendation-box">
+                        <div class="recommendation-title">
+                            Recommendation
+                        </div>
+
+                        <div>
+                            {{ row.recommendations.message }}
+                        </div>
+
+                        <div style="margin-top:6px;">
+                            Risk:
+
+                            {% if row.recommendations.risk_level == "HIGH" %}
+                                <span class="risk-high">HIGH</span>
+                            {% elif row.recommendations.risk_level == "MEDIUM" %}
+                                <span class="risk-medium">MEDIUM</span>
+                            {% else %}
+                                <span class="risk-low">LOW</span>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                {% endif %}
+
+                <div class="traceability">
+                    Model:
+                    {{ row.algorithm_name or row.model_name or "N/A" }}
+
+                    {% if row.artifact_model_name %}
+                        | Artifact: {{ row.artifact_model_name }}
+                    {% endif %}
+
+                    {% if row.request_source %}
+                        | Source: {{ row.request_source }}
+                    {% endif %}
+                </div>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+    {% else %}
+
+        <div class="empty-state">
+            No predictions found for the selected filters.
+        </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>

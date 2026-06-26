@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f7f9fc; color: #222; }
+        .container { display: grid; grid-template-columns: 0.9fr 1.4fr; gap: 24px; align-items: start; }
+        .card { background: white; padding: 24px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+        h1, h2 { margin-top: 0; }
+        label { display: block; margin-top: 14px; font-weight: 600; }
+        input[type="number"] { width: 100%; padding: 10px; margin-top: 6px; border-radius: 8px; border: 1px solid #ccc; box-sizing: border-box; }
+        button { margin-top: 20px; padding: 12px 18px; background: #1f4e79; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; }
+        button:hover { background: #173a5c; }
+        .top-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #1f4e79; font-weight: 600; }
+        .error { color: #b42318; font-weight: bold; }
+        .empty-state { color: #666; }
+        .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .result-card { padding: 16px; border-radius: 12px; background: #f4f6f9; }
+        .target-name { font-weight: bold; }
+        .prediction-value { font-size: 22px; font-weight: bold; margin: 10px 0; }
+        .meta { font-size: 13px; color: #666; line-height: 1.45; }
+        .risk-low { border-left: 6px solid #0a7a28; }
+        .risk-medium { border-left: 6px solid #d4a017; }
+        .risk-high { border-left: 6px solid #b42318; }
+        .risk-badge { margin-top: 8px; font-weight: bold; }
+        .driver-box { margin-top: 12px; padding: 10px; background: #ffffff; border-radius: 8px; border: 1px solid #dde3ea; }
+        .driver-title { font-weight: bold; margin-bottom: 6px; color: #222; }
+        .driver-item { margin-top: 6px; font-size: 13px; color: #444; }
+        .watched-feature { background: #fff8e5; padding: 6px; border-radius: 6px; border-left: 4px solid #d4a017; }
+        .impact-positive { color: #0a7a28; font-weight: bold; }
+        .impact-negative { color: #b42318; font-weight: bold; }
+        .recommendation-box { background: #eef4fb; border-left: 4px solid #1f4e79; }
+        .forced-note { margin-top: 14px; padding: 10px; background: #fff8e5; border-left: 4px solid #d4a017; border-radius: 8px; font-size: 13px; color: #555; }
+    </style>
+</head>
+
+<body>
+
+{% set input_features = input_features | default({}) %}
+{% set submitted_values = submitted_values | default({}) %}
+{% set result = result | default(None) %}
+{% set error = error | default(None) %}
+
+{% if not input_features %}
+    {% set input_features = {
+        "rawThickness": {"label": "Raw Thickness", "unit": "mm", "default_value": 18.2, "is_forced_production_feature": false},
+        "beltSpeed1": {"label": "Belt Speed 1", "unit": "m/min", "default_value": 31.2, "is_forced_production_feature": false},
+        "pressPressureGlobal_mean": {"label": "Global Press Pressure", "unit": "bar", "default_value": 142.5, "is_forced_production_feature": false},
+        "pressPressureMid_mean": {"label": "Mid Press Pressure", "unit": "bar", "default_value": 142.5, "is_forced_production_feature": false},
+        "operCookingTime": {"label": "Cooking Time", "unit": "sec", "default_value": 180, "is_forced_production_feature": true},
+        "operFibresDensity": {"label": "Fibres Density", "unit": "kg/m³", "default_value": 145, "is_forced_production_feature": true},
+        "operPressFibreDensity": {"label": "Press Fibre Density", "unit": "kg/m³", "default_value": 720, "is_forced_production_feature": true}
+    } %}
+{% endif %}
+
+<a class="top-link" href="/">← Back to Home</a>
+<h1>{{ title }}</h1>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Input Features</h2>
+
+        <form method="post" action="/manual-prediction">
+            {% for feature_name, feature_info in input_features.items() %}
+                <label for="{{ feature_name }}">
+                    {{ feature_info["label"] }}
+                    {% if feature_info["unit"] %}({{ feature_info["unit"] }}){% endif %}
+                    {% if feature_info["is_forced_production_feature"] %}⭐{% endif %}
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    name="{{ feature_name }}"
+                    id="{{ feature_name }}"
+                    value="{{ submitted_values.get(feature_name, feature_info['default_value']) }}"
+                    required
+                >
+            {% endfor %}
+
+            <button type="submit">Predict All Targets</button>
+        </form>
+
+        <div class="forced-note">
+            ⭐ Forced production feature = production/requested process signal aligned with TrainingService feature governance.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Prediction Result</h2>
+
+        {% set predictions = result.get("predictions", {}) if result else {} %}
+        {% set used = result.get("used_feature_count_by_target", {}) if result else {} %}
+        {% set important = result.get("important_features_by_target", {}) if result else {} %}
+        {% set explanations = result.get("explanations", {}) if result else {} %}
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% elif predictions %}
+            <div class="result-grid">
+                {% for target, item in predictions.items() %}
+                    {% set risk_level = item.get("risk_level", "LOW") %}
+                    {% set risk = risk_level.lower() %}
+                    {% set target_label = item.get("target_label", target) %}
+                    {% set prediction_display = item.get("prediction_display_value") %}
+
+                    <div class="result-card risk-{{ risk }}">
+                        <div class="target-name">{{ target_label }}</div>
+
+                        <div class="prediction-value">
+                            {% if prediction_display %}
+                                {{ prediction_display }}
+                            {% else %}
+                                {{ "%.2f"|format(item.get("prediction", 0)) }}
+                            {% endif %}
+                        </div>
+
+                        <div class="meta">
+                            Model: {{ item.get("model_name") or item.get("artifact_model_name") or "N/A" }}<br>
+                            Algorithm: {{ item.get("algorithm_name") or "N/A" }}<br>
+                            Used Features: {{ used.get(target, item.get("used_feature_count", 0)) }}
+                        </div>
+
+                        <div class="risk-badge">
+                            {% if risk_level == "LOW" %}🟢 LOW{% elif risk_level == "MEDIUM" %}🟡 MEDIUM{% elif risk_level == "HIGH" %}🔴 HIGH{% else %}{{ risk_level }}{% endif %}
+                        </div>
+
+                        {% if important.get(target) %}
+                            <div class="meta" style="margin-top:10px;">
+                                <strong>Important Features:</strong><br>
+                                {{ important.get(target) | join(", ") }}
+                            </div>
+                        {% endif %}
+
+                        {% set target_explanation = explanations.get(target, item.get("explanation", [])) %}
+
+                        {% if target_explanation %}
+                            <div class="driver-box">
+                                <div class="driver-title">Top Prediction Drivers</div>
+
+                                {% for exp in target_explanation[:5] %}
+                                    {% set impact = exp.get("impact", 0) %}
+                                    <div class="driver-item {% if exp.get('is_watched_feature') or exp.get('is_forced_production_feature') %}watched-feature{% endif %}">
+                                        {% if impact >= 0 %}
+                                            ⬆️ <span class="impact-positive">+{{ "%.3f"|format(impact) }}</span>
+                                        {% else %}
+                                            ⬇️ <span class="impact-negative">{{ "%.3f"|format(impact) }}</span>
+                                        {% endif %}
+                                        — <strong>{{ exp.get("feature") }}</strong>
+                                        {% if exp.get("value") is not none %}| Value: {{ exp.get("value") }}{% endif %}
+                                        {% if exp.get("is_watched_feature") or exp.get("is_forced_production_feature") %}| ⭐ Production feature{% endif %}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        {% if item.get("recommendations") %}
+                            <div class="driver-box recommendation-box">
+                                <div class="driver-title">Operator / Process Recommendations</div>
+                                {% for rec in item.get("recommendations") %}
+                                    <div class="driver-item">✅ {{ rec.get("message") or rec }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="empty-state">
+                No prediction yet. Fill the form and click Predict All Targets.
+            </p>
+        {% endif %}
+    </div>
+
+</div>
+
+</body>
+</html>

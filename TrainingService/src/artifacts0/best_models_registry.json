@@ -1,0 +1,89 @@
+{
+  "labDensityAverage": {
+    "target_name": "labDensityAverage",
+    "algorithm_name": "ensemble_xgb_rf",
+    "artifact_model_name": "labDensityAverage_ensemble_xgb_rf_v1",
+    "artifact_dir": "artifacts\\labDensityAverage_xgb_tuned_v2",
+    "test_r2": 0.6949416312054331,
+    "test_rmse": 39.15145319175585,
+    "test_mae": 24.579578432188978,
+    "validation_r2": 0.8439194488135475,
+    "type": "weighted_ensemble",
+    "members": {
+      "xgb": "labDensityAverage_xgb_tuned_v2",
+      "rf": "labDensityAverage_rf_v2"
+    },
+    "weights": {
+      "xgb": 0.55,
+      "rf": 0.44999999999999996
+    }
+  },
+  "labBendingAvg": {
+    "target_name": "labBendingAvg",
+    "algorithm_name": "ensemble_xgb_rf",
+    "artifact_model_name": "labBendingAvg_ensemble_xgb_rf_v1",
+    "artifact_dir": "artifacts\\labBendingAvg_xgb_tuned_v2",
+    "test_r2": 0.6902758746140989,
+    "test_rmse": 4.943599455048092,
+    "test_mae": 3.2664858269549004,
+    "validation_r2": 0.8138459547771463,
+    "type": "weighted_ensemble",
+    "members": {
+      "xgb": "labBendingAvg_xgb_tuned_v2",
+      "rf": "labBendingAvg_rf_v2"
+    },
+    "weights": {
+      "xgb": 0.55,
+      "rf": 0.44999999999999996
+    }
+  },
+  "labEModulAvg": {
+    "target_name": "labEModulAvg",
+    "algorithm_name": "ensemble_xgb_rf",
+    "artifact_model_name": "labEModulAvg_ensemble_xgb_rf_v1",
+    "artifact_dir": "artifacts\\labEModulAvg_xgb_tuned_v2",
+    "test_r2": 0.6330473712740194,
+    "test_rmse": 421.4038001393679,
+    "test_mae": 286.28489756307863,
+    "validation_r2": 0.8022880491265383,
+    "type": "weighted_ensemble",
+    "members": {
+      "xgb": "labEModulAvg_xgb_tuned_v2",
+      "rf": "labEModulAvg_rf_v2"
+    },
+    "weights": {
+      "xgb": 0.55,
+      "rf": 0.44999999999999996
+    }
+  },
+  "labTensileAvg": {
+    "target_name": "labTensileAvg",
+    "algorithm_name": "ensemble_xgb_rf",
+    "artifact_model_name": "labTensileAvg_ensemble_xgb_rf_v1",
+    "artifact_dir": "artifacts\\labTensileAvg_xgb_tuned_v2",
+    "test_r2": 0.6726730705919217,
+    "test_rmse": 0.2750205559545856,
+    "test_mae": 0.1701837051176132,
+    "validation_r2": 0.7096611606775131,
+    "type": "weighted_ensemble",
+    "members": {
+      "xgb": "labTensileAvg_xgb_tuned_v2",
+      "rf": "labTensileAvg_rf_v2"
+    },
+    "weights": {
+      "xgb": 0.55,
+      "rf": 0.44999999999999996
+    }
+  },
+  "labSurfaceSoundnessAvg": {
+    "target_name": "labSurfaceSoundnessAvg",
+    "algorithm_name": "lgbm",
+    "artifact_model_name": "labSurfaceSoundnessAvg_lgbm_v1",
+    "artifact_dir": "artifacts\\labSurfaceSoundnessAvg_lgbm_v1",
+    "test_r2": 0.5176719685540081,
+    "test_rmse": 0.20280218730889768,
+    "test_mae": 0.1558811494061801,
+    "validation_r2": 0.7875374225924265,
+    "type": "single_model"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "validation": {
+    "mae": 18.88870866563585,
+    "rmse": 30.45788862834805,
+    "r2": 0.8134368263869665
+  },
+  "test": {
+    "mae": 24.77788316514757,
+    "rmse": 39.319668623872865,
+    "r2": 0.6923146143001676
+  },
+  "row_counts": {
+    "train": 342,
+    "val": 72,
+    "test": 72
+  },
+  "split_type": "time_based",
+  "selected_feature_count": 30,
+  "selected_features": [
+    "rawThickness",
+    "pressPressureL_mean",
+    "pressPressureR_mean",
+    "pressPressureGlobal_mean",
+    "pressPressureEnd_mean",
+    "pressPressureGlobal_min",
+    "pressPressureC_mean",
+    "pressPressureMid_mean",
+    "thicknessClosed_max",
+    "beltSpeed1",
+    "pressPressureFront_mean",
+    "thicknessClosed_mean",
+    "pressPressureL_std",
+    "pressPressureR_std",
+    "pressPressureGlobal_std",
+    "pressPressureC_std",
+    "pressPressureGlobal_max",
+    "pressPressureGlobal_range",
+    "pressPressureFrontEnd_diff",
+    "tempGlobal_std",
+    "tempGlobal_range",
+    "operPressFibreDensity",
+    "tempGlobal_min",
+    "thicknessClosed_std",
+    "thicknessClosed_range",
+    "tempGlobal_mean",
+    "tempGlobal_max",
+    "pressPressureLR_mean_diff",
+    "operCookingTime",
+    "thicknessClosed_min"
+  ],
+  "tuning": {
+    "tuned": true,
+    "best_params": {
+      "subsample": 1.0,
+      "reg_lambda": 10.0,
+      "reg_alpha": 0.0,
+      "n_estimators": 289,
+      "min_child_weight": 3,
+      "max_depth": 6,
+      "learning_rate": 0.08,
+      "gamma": 0.3,
+      "colsample_bytree": 1.0
+    },
+    "best_validation_metrics_during_tuning": {
+      "mae": 18.88870866563585,
+      "rmse": 30.45788862834805,
+      "r2": 0.8134368263869665
+    },
+    "tuning_iterations": 25,
+    "early_stopping_rounds": 30
+  }
+}

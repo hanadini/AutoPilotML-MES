@@ -1,0 +1,16 @@
+{
+  "model_name": "labEModulAvg_rf_v2",
+  "target_name": "labEModulAvg",
+  "algorithm": "rf",
+  "feature_count": 30,
+  "training_timestamp": "2026-05-13T07:12:45.677255Z",
+  "notes": "MDF1 Random Forest model with engineered features",
+  "pipeline_type": "single_target_regression",
+  "split_type": "time_based",
+  "forced_production_features": [
+    "operCookingTime",
+    "operFibresDensity",
+    "operPressFibreDensity",
+    "pressPressureMid_mean"
+  ]
+}

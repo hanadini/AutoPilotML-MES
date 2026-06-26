@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 32px; background: #f7f9fc; color: #222; }
+        .page-header { margin-bottom: 24px; }
+        .top-link { display: inline-block; margin-bottom: 14px; text-decoration: none; color: #1f4e79; font-weight: 600; }
+        .dashboard-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; align-items: start; }
+        .card, details.section { background: white; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+        .card { padding: 22px; }
+        h1, h2, h3 { margin-top: 0; }
+        label { display: block; margin-top: 14px; font-weight: 600; }
+        input[type="number"] { width: 100%; padding: 10px; margin-top: 6px; border-radius: 10px; border: 1px solid #ccc; box-sizing: border-box; }
+        input[readonly] { background: #eef1f5; color: #666; border: 1px solid #cfd6de; }
+        button { margin-top: 18px; padding: 12px 18px; background: #1f4e79; color: white; border: none; border-radius: 10px; cursor: pointer; font-weight: 600; }
+        button:hover { background: #173a5c; }
+        .secondary-button { background: #6c757d; }
+        .secondary-button:hover { background: #545b62; }
+        .quick-actions button { margin-right: 8px; margin-top: 8px; padding: 8px 12px; font-size: 14px; }
+        .changed { border: 2px solid orange !important; }
+        .error { color: #a61b1b; font-weight: 700; }
+        .positive { color: #0a7a28; font-weight: 700; }
+        .negative { color: #b42318; font-weight: 700; }
+        .neutral { color: #555; font-weight: 700; }
+        .risk-low, .risk-green { background: #eaf7ee; border-left: 6px solid #0a7a28; }
+        .risk-medium, .risk-yellow { background: #fff8e6; border-left: 6px solid #d4a017; }
+        .risk-high, .risk-red { background: #fdecec; border-left: 6px solid #b42318; }
+        .risk-badge { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; margin-top: 8px; }
+        .risk-badge.low, .risk-badge.green { background: #d9f2e1; color: #0a7a28; }
+        .risk-badge.medium, .risk-badge.yellow { background: #fff1c7; color: #8a6d00; }
+        .risk-badge.high, .risk-badge.red { background: #f9d6d6; color: #b42318; }
+        .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+        .kpi-card { background: white; padding: 18px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+        .kpi-title { font-size: 13px; color: #666; margin-bottom: 6px; }
+        .kpi-value { font-size: 24px; font-weight: 700; }
+        details.section { margin-top: 22px; overflow: hidden; }
+        details.section summary { list-style: none; cursor: pointer; padding: 18px 22px; font-weight: 700; font-size: 20px; background: #eef3f8; }
+        details.section summary::-webkit-details-marker { display: none; }
+        details.section summary::after { content: "▼"; float: right; font-size: 14px; color: #1f4e79; }
+        details.section[open] summary::after { content: "▲"; }
+        .section-content { padding: 22px; }
+        pre { background: #f3f5f8; padding: 14px; border-radius: 10px; overflow-x: auto; }
+        .metric-box { margin-bottom: 12px; padding: 12px; background: #f3f5f8; border-radius: 10px; }
+        .summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .trend-row { margin-bottom: 12px; }
+        .trend-label { font-size: 14px; margin-bottom: 6px; }
+        .trend-bar-wrap { background: #edf1f5; border-radius: 999px; height: 12px; overflow: hidden; }
+        .trend-bar { height: 12px; border-radius: 999px; }
+        .trend-bar.positive { background: #0a7a28; }
+        .trend-bar.negative { background: #b42318; }
+        .trend-bar.neutral { background: #888; }
+        .small-note { color: #666; font-size: 13px; }
+        .replay-banner { background: #fff3cd; border-left: 6px solid #ffcc00; padding: 12px; margin-bottom: 20px; border-radius: 8px; font-size: 14px; }
+        .forced-feature-label { color: #8a6d00; font-weight: 700; }
+    </style>
+
+    <script>
+        function copyBaselineToScenario() {
+            const inputs = document.querySelectorAll("[data-feature-name]");
+            inputs.forEach(function(input) {
+                const featureName = input.dataset.featureName;
+                const scenarioInput = document.getElementById("scenario_" + featureName);
+                if (scenarioInput && input.id === "baseline_" + featureName) {
+                    scenarioInput.value = input.value;
+                    scenarioInput.classList.remove("changed");
+                }
+            });
+        }
+
+        function adjust(featureName, delta) {
+            const el = document.getElementById("scenario_" + featureName);
+            if (!el) { return; }
+            const currentValue = parseFloat(el.value || 0);
+            el.value = currentValue + delta;
+            el.classList.add("changed");
+        }
+    </script>
+</head>
+
+<body>
+
+{% set input_features = input_features | default({}) %}
+{% set quick_actions = quick_actions | default({}) %}
+{% set forced_feature_names = forced_feature_names | default([]) %}
+{% set baseline_values = baseline_values | default({}) %}
+{% set scenario_values = scenario_values | default({}) %}
+{% set baseline_result = baseline_result | default(None) %}
+{% set scenario_result = scenario_result | default(None) %}
+{% set comparison = comparison | default(None) %}
+{% set sensitivity_results = sensitivity_results | default(None) %}
+{% set sensitivity_summary = sensitivity_summary | default(None) %}
+{% set recommendations = recommendations | default(None) %}
+{% set mini_trend_data = mini_trend_data | default(None) %}
+{% set replay_timestamp = replay_timestamp | default(None) %}
+{% set error = error | default(None) %}
+
+{% if not input_features %}
+    {% set input_features = {
+        "rawThickness": {"label": "Raw Thickness", "unit": "mm", "default_value": 18.2, "is_forced_production_feature": false},
+        "beltSpeed1": {"label": "Belt Speed 1", "unit": "m/min", "default_value": 31.2, "is_forced_production_feature": false},
+        "pressPressureGlobal_mean": {"label": "Global Press Pressure", "unit": "bar", "default_value": 142.5, "is_forced_production_feature": false},
+        "pressPressureMid_mean": {"label": "Mid Press Pressure", "unit": "bar", "default_value": 142.5, "is_forced_production_feature": false},
+        "operCookingTime": {"label": "Cooking Time", "unit": "sec", "default_value": 180, "is_forced_production_feature": true},
+        "operFibresDensity": {"label": "Fibres Density", "unit": "kg/m³", "default_value": 145, "is_forced_production_feature": true},
+        "operPressFibreDensity": {"label": "Press Fibre Density", "unit": "kg/m³", "default_value": 720, "is_forced_production_feature": true}
+    } %}
+{% endif %}
+
+{% if not quick_actions %}
+    {% set quick_actions = {
+        "beltSpeed1": {"label": "Belt Speed", "step": 1},
+        "pressPressureGlobal_mean": {"label": "Global Pressure", "step": 1},
+        "pressPressureMid_mean": {"label": "Mid Pressure", "step": 1},
+        "operCookingTime": {"label": "Cooking Time", "step": 10},
+        "operFibresDensity": {"label": "Fibre Density", "step": 10},
+        "operPressFibreDensity": {"label": "Press Fibre", "step": 20}
+    } %}
+{% endif %}
+
+{% if not forced_feature_names %}
+    {% set forced_feature_names = ["operCookingTime", "operFibresDensity", "operPressFibreDensity"] %}
+{% endif %}
+
+<div class="page-header">
+    <a class="top-link" href="/">← Back to Home</a>
+    <h1>
+        {{ title }}
+        {% if replay_timestamp %}
+            <span style="font-size:14px;color:#888;">(Replay Mode)</span>
+        {% endif %}
+    </h1>
+</div>
+
+{% if error %}
+    <p class="error">{{ error }}</p>
+{% endif %}
+
+<div class="kpi-grid">
+    <div class="kpi-card">
+        <div class="kpi-title">Simulation Mode</div>
+        <div class="kpi-value">What-if</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-title">Input Features</div>
+        <div class="kpi-value">{{ input_features|length }}</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-title">Targets</div>
+        <div class="kpi-value">5</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-title">Decision Support</div>
+        <div class="kpi-value">ML + SHAP</div>
+    </div>
+</div>
+
+{% if replay_timestamp %}
+    <div class="replay-banner">
+        🔁 Replaying Scenario<br>
+        <strong>Timestamp:</strong> {{ replay_timestamp.split(".")[0].replace("T", " ") }}
+    </div>
+{% endif %}
+
+<form method="post" action="/simulation">
+    <div class="dashboard-grid">
+
+        <div class="card">
+            <h2>Baseline Inputs</h2>
+
+            {% for feature_name, feature_info in input_features.items() %}
+                <label for="baseline_{{ feature_name }}">
+                    {{ feature_info["label"] }}
+                    {% if feature_info["unit"] %}({{ feature_info["unit"] }}){% endif %}
+                    {% if feature_info["is_forced_production_feature"] %}<span class="forced-feature-label">⭐</span>{% endif %}
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    name="baseline_{{ feature_name }}"
+                    id="baseline_{{ feature_name }}"
+                    data-feature-name="{{ feature_name }}"
+                    value="{{ baseline_values.get(feature_name, feature_info['default_value']) }}"
+                    {% if replay_timestamp %}readonly{% endif %}
+                    required
+                >
+            {% endfor %}
+
+            <button type="button" class="secondary-button" onclick="copyBaselineToScenario()">
+                Copy to Scenario →
+            </button>
+        </div>
+
+        <div class="card">
+            <h2>Scenario Inputs</h2>
+
+            {% for feature_name, feature_info in input_features.items() %}
+                {% set baseline_value = baseline_values.get(feature_name, feature_info["default_value"]) %}
+                {% set scenario_value = scenario_values.get(feature_name, feature_info["default_value"]) %}
+
+                <label for="scenario_{{ feature_name }}">
+                    {{ feature_info["label"] }}
+                    {% if feature_info["unit"] %}({{ feature_info["unit"] }}){% endif %}
+                    {% if feature_info["is_forced_production_feature"] %}<span class="forced-feature-label">⭐</span>{% endif %}
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    name="scenario_{{ feature_name }}"
+                    id="scenario_{{ feature_name }}"
+                    value="{{ scenario_value }}"
+                    class="{% if scenario_value != baseline_value %}changed{% endif %}"
+                    required
+                >
+            {% endfor %}
+
+            <div class="quick-actions">
+                {% for feature_name, action in quick_actions.items() %}
+                    <button type="button" class="secondary-button" onclick="adjust('{{ feature_name }}', {{ action['step'] }})">
+                        + {{ action["label"] }}
+                    </button>
+
+                    <button type="button" class="secondary-button" onclick="adjust('{{ feature_name }}', -{{ action['step'] }})">
+                        - {{ action["label"] }}
+                    </button>
+                {% endfor %}
+            </div>
+
+            <button type="submit">Run Simulation</button>
+        </div>
+
+        <div class="card">
+            <h2>Comparison Result</h2>
+
+            {% if comparison %}
+                {% for target, item in comparison.items() %}
+                    {% set risk_level = item.get("risk_level", "LOW") %}
+                    {% set risk = risk_level.lower() %}
+                    {% set target_label = item.get("target_label", target) %}
+
+                    <div class="metric-box risk-{{ risk }}">
+                        <strong>{{ target_label }}</strong><br>
+                        Baseline: {{ item.get("baseline_display_value") or "%.3f"|format(item.baseline_prediction) }}<br>
+                        Scenario: {{ item.get("scenario_display_value") or "%.3f"|format(item.scenario_prediction) }}<br>
+
+                        {% if item.delta > 0 %}
+                            Delta: <span class="positive">+{{ "%.3f"|format(item.delta) }}</span><br>
+                        {% elif item.delta < 0 %}
+                            Delta: <span class="negative">{{ "%.3f"|format(item.delta) }}</span><br>
+                        {% else %}
+                            Delta: <span class="neutral">0.000</span><br>
+                        {% endif %}
+
+                        {% if risk_level == "LOW" %}
+                            <span class="risk-badge low">LOW RISK</span>
+                        {% elif risk_level == "MEDIUM" %}
+                            <span class="risk-badge medium">MEDIUM RISK</span>
+                        {% elif risk_level == "HIGH" %}
+                            <span class="risk-badge high">HIGH RISK</span>
+                        {% else %}
+                            <span class="risk-badge neutral">{{ risk_level }}</span>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No simulation yet.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <details class="section">
+        <summary>Submitted Inputs</summary>
+        <div class="section-content">
+            <strong>Baseline</strong>
+            <pre>{{ baseline_values | tojson(indent=2) }}</pre>
+
+            <strong>Scenario</strong>
+            <pre>{{ scenario_values | tojson(indent=2) }}</pre>
+
+            <p class="small-note">
+                ⭐ Forced production feature = production/requested process signal aligned with TrainingService feature governance.
+            </p>
+        </div>
+    </details>
+</form>
+
+</body>
+</html>

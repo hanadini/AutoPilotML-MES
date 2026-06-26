@@ -1,0 +1,51 @@
+{
+  "validation": {
+    "mae": 0.14128089651954434,
+    "rmse": 0.1904367210649154,
+    "r2": 0.7875374225924265
+  },
+  "test": {
+    "mae": 0.1558811494061801,
+    "rmse": 0.20280218730889768,
+    "r2": 0.5176719685540081
+  },
+  "row_counts": {
+    "train": 342,
+    "val": 72,
+    "test": 72
+  },
+  "split_type": "time_based",
+  "selected_feature_count": 30,
+  "selected_features": [
+    "pressPressureC_std",
+    "pressPressureGlobal_range",
+    "pressPressureFrontEnd_diff",
+    "pressPressureGlobal_max",
+    "pressPressureGlobal_std",
+    "pressPressureL_std",
+    "pressPressureR_std",
+    "thicknessClosed_max",
+    "pressPressureFront_mean",
+    "thicknessClosed_mean",
+    "pressPressureC_mean",
+    "beltSpeed1",
+    "pressPressureGlobal_mean",
+    "pressPressureR_mean",
+    "pressPressureL_mean",
+    "thicknessClosed_std",
+    "thicknessClosed_range",
+    "operCookingTime",
+    "operPressFibreDensity",
+    "tempGlobal_min",
+    "tempGlobal_range",
+    "rawThickness",
+    "pressPressureEnd_mean",
+    "tempGlobal_std",
+    "tempGlobal_mean",
+    "pressPressureMid_mean",
+    "pressPressureGlobal_min",
+    "thicknessClosed_min",
+    "pressPressureLR_mean_diff",
+    "tempGlobal_max"
+  ]
+}

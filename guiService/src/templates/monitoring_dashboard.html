@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 36px;
+            background: #f4f6f9;
+            color: #222;
+        }
+
+        .top-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #1f4e79;
+            font-weight: 700;
+        }
+
+        .page-header {
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .status-banner {
+            padding: 14px 18px;
+            border-radius: 12px;
+            margin-bottom: 22px;
+            font-weight: 700;
+        }
+
+        .online {
+            background: #eaf7ee;
+            color: #0a7a28;
+            border-left: 6px solid #0a7a28;
+        }
+
+        .offline {
+            background: #fdecec;
+            color: #b42318;
+            border-left: 6px solid #b42318;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(180px, 1fr));
+            gap: 18px;
+            margin-bottom: 24px;
+        }
+
+        .kpi-card {
+            background: white;
+            border-radius: 14px;
+            padding: 20px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            border-left: 6px solid #1f4e79;
+        }
+
+        .kpi-card.green {
+            border-left-color: #0a7a28;
+        }
+
+        .kpi-card.yellow {
+            border-left-color: #d4a017;
+        }
+
+        .kpi-card.red {
+            border-left-color: #b42318;
+        }
+
+        .kpi-card.gray {
+            border-left-color: #6c757d;
+        }
+
+        .kpi-title {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .kpi-value {
+            font-size: 26px;
+            font-weight: 800;
+        }
+
+        .section {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            margin-bottom: 24px;
+        }
+
+        .section h2 {
+            margin-top: 0;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .distribution-row {
+            margin-bottom: 12px;
+        }
+
+        .distribution-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .bar-wrap {
+            height: 12px;
+            background: #edf1f5;
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .bar {
+            height: 12px;
+            background: #1f4e79;
+            border-radius: 999px;
+        }
+
+        .bar.low {
+            background: #0a7a28;
+        }
+
+        .bar.medium {
+            background: #d4a017;
+        }
+
+        .bar.high {
+            background: #b42318;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 14px;
+        }
+
+        th {
+            background: #1f4e79;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background: #f1f5fb;
+        }
+
+        .advisor {
+            padding: 16px;
+            border-radius: 12px;
+            border-left: 6px solid #1f4e79;
+            background: #f7f9fc;
+        }
+
+        .advisor.HEALTHY {
+            border-left-color: #0a7a28;
+            background: #eaf7ee;
+        }
+
+        .advisor.WATCH,
+        .advisor.WARNING {
+            border-left-color: #d4a017;
+            background: #fff8e5;
+        }
+
+        .advisor.RETRAINING_RECOMMENDED,
+        .advisor.DRIFT_DETECTED {
+            border-left-color: #b42318;
+            background: #fdecec;
+        }
+
+        .advisor.NOT_ENOUGH_DATA {
+            border-left-color: #6c757d;
+            background: #f3f5f8;
+        }
+
+        .advisor-status {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .error {
+            background: #fdecec;
+            color: #b42318;
+            padding: 14px;
+            border-radius: 10px;
+            border-left: 6px solid #b42318;
+            margin-bottom: 20px;
+        }
+
+        .note {
+            color: #666;
+            font-size: 13px;
+            margin-top: 12px;
+        }
+
+        .action-button {
+            display: inline-block;
+            background: #1f4e79;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 18px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+.action-button:hover {
+    background: #163a5c;
+}
+    </style>
+</head>
+
+
+<body>
+
+<div style="margin-bottom:20px;">
+
+    <a class="action-button" href="/">
+        ← Back to Home
+    </a>
+
+
+    <form method="post"
+          action="/monitoring-snapshots/create"
+          style="display:inline;">
+        <button
+            type="submit"
+            class="action-button">
+            Create Snapshot
+        </button>
+    </form>
+
+</div>
+
+
+<div class="page-header">
+    <h1>{{ title }}</h1>
+    <div class="subtitle">
+        Industrial AI / MOM operational monitoring for predictions, feedback, quality results, drift detection, and retraining governance.
+    </div>
+</div>
+
+{% if monitoring_service_healthy %}
+    <div class="status-banner online">
+        MonitoringService: ONLINE
+    </div>
+{% else %}
+    <div class="status-banner offline">
+        MonitoringService: OFFLINE
+    </div>
+{% endif %}
+
+{% if error %}
+    <div class="error">
+        {{ error }}
+    </div>
+{% endif %}
+
+{% set total_predictions = system_overview.get("total_mes_predictions", 0) %}
+{% set total_feedback = system_overview.get("total_operator_feedback", 0) %}
+{% set acceptance_rate = system_overview.get("recommendation_acceptance_rate_percent", 0) %}
+{% set mae = model_performance.get("mae", 0) %}
+{% set mape = model_performance.get("mape", 0) %}
+{% set total_quality = model_performance.get("total_records", 0) %}
+{% set advisor_status = retraining_advisor.get("status", "N/A") %}
+{% set drift_state = drift_status.get("status", "N/A") %}
+
+<div class="dashboard-grid">
+
+    <div class="kpi-card">
+        <div class="kpi-title">MES Predictions</div>
+        <div class="kpi-value">{{ total_predictions }}</div>
+    </div>
+
+    <div class="kpi-card green">
+        <div class="kpi-title">Operator Feedback</div>
+        <div class="kpi-value">{{ total_feedback }}</div>
+    </div>
+
+    <div class="kpi-card yellow">
+        <div class="kpi-title">Acceptance Rate</div>
+        <div class="kpi-value">{{ acceptance_rate }}%</div>
+    </div>
+
+    <div class="kpi-card {% if advisor_status == 'RETRAINING_RECOMMENDED' %}red{% elif advisor_status == 'WATCH' %}yellow{% elif advisor_status == 'NOT_ENOUGH_DATA' %}gray{% else %}green{% endif %}">
+        <div class="kpi-title">Retraining Status</div>
+        <div class="kpi-value">{{ advisor_status }}</div>
+    </div>
+
+    <div class="kpi-card">
+        <div class="kpi-title">Quality Result Records</div>
+        <div class="kpi-value">{{ total_quality }}</div>
+    </div>
+
+    <div class="kpi-card">
+        <div class="kpi-title">MAE</div>
+        <div class="kpi-value">{{ mae }}</div>
+    </div>
+
+    <div class="kpi-card">
+        <div class="kpi-title">MAPE</div>
+        <div class="kpi-value">{{ mape }}%</div>
+    </div>
+
+    <div class="kpi-card {% if drift_state == 'DRIFT_DETECTED' %}red{% elif drift_state == 'WARNING' %}yellow{% elif drift_state == 'NOT_ENOUGH_DATA' %}gray{% else %}green{% endif %}">
+        <div class="kpi-title">Drift Status</div>
+        <div class="kpi-value">{{ drift_state }}</div>
+    </div>
+
+</div>
+
+<div class="two-col">
+
+    <div class="section">
+        <h2>Risk Distribution</h2>
+
+        {% set risks = system_overview.get("risk_distribution", {}) %}
+        {% set risk_total = risks.values() | sum if risks else 0 %}
+
+        {% if risks %}
+            {% for risk, count in risks.items() %}
+                {% set pct = ((count / risk_total) * 100) if risk_total else 0 %}
+                <div class="distribution-row">
+                    <div class="distribution-label">
+                        <strong>{{ risk }}</strong>
+                        <span>{{ count }} / {{ "%.1f"|format(pct) }}%</span>
+                    </div>
+                    <div class="bar-wrap">
+                        <div class="bar {{ risk.lower() }}" style="width: {{ pct }}%;"></div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No risk data available yet.</p>
+        {% endif %}
+    </div>
+
+    <div class="section">
+        <h2>Operator Feedback Distribution</h2>
+
+        {% set feedback = system_overview.get("feedback_distribution", {}) %}
+        {% set feedback_total = feedback.values() | sum if feedback else 0 %}
+
+        {% if feedback %}
+            {% for decision, count in feedback.items() %}
+                {% set pct = ((count / feedback_total) * 100) if feedback_total else 0 %}
+                <div class="distribution-row">
+                    <div class="distribution-label">
+                        <strong>{{ decision }}</strong>
+                        <span>{{ count }} / {{ "%.1f"|format(pct) }}%</span>
+                    </div>
+                    <div class="bar-wrap">
+                        <div class="bar" style="width: {{ pct }}%;"></div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No operator feedback available yet.</p>
+        {% endif %}
+    </div>
+
+</div>
+
+<div class="section">
+    <h2>Model Performance by Target</h2>
+
+    {% set performance_items = model_performance_by_target.get("items", []) %}
+
+    {% if performance_items %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Target</th>
+                    <th>Samples</th>
+                    <th>MAE</th>
+                    <th>MAPE (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in performance_items %}
+                    <tr>
+                        <td>{{ item.target }}</td>
+                        <td>{{ item.samples }}</td>
+                        <td>{{ item.mae }}</td>
+                        <td>{{ item.mape }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No quality result performance data available yet.</p>
+    {% endif %}
+</div>
+
+<div class="two-col">
+
+    <div class="section">
+        <h2>Retraining Advisor</h2>
+
+        <div class="advisor {{ advisor_status }}">
+            <div class="advisor-status">
+                {{ advisor_status }}
+            </div>
+
+            <div>
+                Current MAPE:
+                <strong>{{ retraining_advisor.get("current_mape", "N/A") }}%</strong>
+            </div>
+
+            <div>
+                Warning Threshold:
+                <strong>{{ retraining_advisor.get("warning_threshold", "N/A") }}%</strong>
+            </div>
+
+            <div>
+                Retraining Threshold:
+                <strong>{{ retraining_advisor.get("retraining_threshold", "N/A") }}%</strong>
+            </div>
+
+            <p>
+                {{ retraining_advisor.get("message", "No retraining advisor message available.") }}
+            </p>
+        </div>
+
+        <div class="note">
+            This advisor is based on quality result error metrics and should be used as engineering decision support, not automatic retraining execution.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Drift Detection</h2>
+
+        <div class="advisor {{ drift_state }}">
+            <div class="advisor-status">
+                {{ drift_state }}
+            </div>
+
+            <div>
+                Drift Score:
+                <strong>{{ drift_status.get("drift_score", "N/A") }}</strong>
+            </div>
+
+            <div>
+                Previous MAPE:
+                <strong>{{ drift_status.get("previous_mape", "N/A") }}%</strong>
+            </div>
+
+            <div>
+                Current MAPE:
+                <strong>{{ drift_status.get("current_mape", "N/A") }}%</strong>
+            </div>
+
+            <div>
+                Previous Samples:
+                <strong>{{ drift_status.get("previous_samples", "N/A") }}</strong>
+            </div>
+
+            <div>
+                Current Samples:
+                <strong>{{ drift_status.get("current_samples", "N/A") }}</strong>
+            </div>
+
+            <p>
+                {{ drift_status.get("message", "No drift status message available.") }}
+            </p>
+        </div>
+
+        <div class="note">
+            Drift detection compares recent quality result prediction error against earlier quality result windows.
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

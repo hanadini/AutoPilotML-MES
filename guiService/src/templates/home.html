@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f4f6f9;
+            color: #222;
+        }
+
+        .page-header {
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .button-group {
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-right: 10px;
+            margin-top: 10px;
+            padding: 12px 18px;
+            background: #1f4e79;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        .button:hover {
+            background: #173a5c;
+        }
+
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .status-box {
+            padding: 12px;
+            border-radius: 10px;
+            background: #f7f9fc;
+        }
+
+        .status-title {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 4px;
+        }
+
+        .status-value {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .healthy {
+            color: #0a7a28;
+        }
+
+        .warning {
+            color: #c48a00;
+        }
+
+        .danger {
+            color: #b42318;
+        }
+
+        .target-list {
+            margin-top: 12px;
+            padding-left: 20px;
+        }
+
+        .target-list li {
+            margin-bottom: 6px;
+        }
+
+        .architecture-box {
+            margin-top: 18px;
+            padding: 14px;
+            background: #eef4fb;
+            border-left: 5px solid #1f4e79;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .feature-badge {
+            display: inline-block;
+            margin-top: 8px;
+            margin-right: 8px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #eef4fb;
+            color: #1f4e79;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .footer-note {
+            margin-top: 30px;
+            color: #777;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page-header">
+
+    <h1>{{ title }}</h1>
+
+    <div class="subtitle">
+        MDF1 Industrial AI Prediction Cockpit
+    </div>
+
+</div>
+
+<div class="dashboard-grid">
+
+    <div class="card">
+
+        <h2>Prediction Operations</h2>
+
+        <p>
+            Run multi-target industrial quality prediction workflows
+            aligned with TrainingService artifact governance,
+            PredictionService model registry,
+            SHAP explainability,
+            and forced production feature tracking.
+        </p>
+
+        <div class="button-group">
+            <a class="button" href="/manual-prediction">
+                Manual Prediction
+            </a>
+
+            <a class="button" href="/simulation">
+                What-if Simulation
+            </a>
+
+            <a class="button" href="/latest-predictions">
+                Latest Predictions
+            </a>
+
+            <a class="button" href="/history">
+                Prediction History
+            </a>
+
+            <a class="button" href="/monitoring-dashboard">
+                Monitoring Dashboard
+            </a>
+        </div>
+
+        <div class="status-grid">
+
+            <div class="status-box">
+                <div class="status-title">
+                    Prediction Targets
+                </div>
+
+                <div class="status-value">
+                    {{ target_count or 5 }}
+                </div>
+            </div>
+
+            <div class="status-box">
+                <div class="status-title">
+                    Registered Models
+                </div>
+
+                <div class="status-value">
+                    {{ registered_model_count or "N/A" }}
+                </div>
+            </div>
+
+            <div class="status-box">
+                <div class="status-title">
+                    PredictionService
+                </div>
+
+                <div class="status-value {% if prediction_service_healthy %}healthy{% else %}danger{% endif %}">
+                    {% if prediction_service_healthy %}
+                    ONLINE
+                    {% else %}
+                    OFFLINE
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="status-box">
+                <div class="status-title">
+                    Explainability
+                </div>
+
+                <div class="status-value healthy">
+                    SHAP Enabled
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Industrial ML Scope</h2>
+
+        <p>
+            Current GUIService is aligned with the MDF1
+            TrainingService → PredictionService → GUIService
+            architecture.
+        </p>
+
+        <ul class="target-list">
+            {% for target in target_labels %}
+            <li>{{ target }}</li>
+            {% endfor %}
+        </ul>
+
+        <div class="feature-badge">
+            Multi-Target Prediction
+        </div>
+
+        <div class="feature-badge">
+            SHAP Explainability
+        </div>
+
+        <div class="feature-badge">
+            Time-Based Validation
+        </div>
+
+        <div class="feature-badge">
+            Forced Production Features
+        </div>
+
+        <div class="feature-badge">
+            Artifact Governance
+        </div>
+
+        <div class="feature-badge">
+            Registry-Driven Serving
+        </div>
+
+        <div class="architecture-box">
+            TrainingService creates versioned industrial ML artifacts
+            including models, features, metrics, metadata,
+            feature importance, and explainability outputs.
+            PredictionService loads registry-selected bundles
+            and serves production-safe predictions through FastAPI.
+            GUIService provides operator-facing visualization,
+            simulation, explainability, and recommendation workflows.
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Prediction Monitoring</h2>
+
+        <p>
+            Review latest prediction behavior, process changes,
+            and operator recommendations generated from
+            industrial ML outputs.
+        </p>
+
+        <div class="button-group">
+            <a class="button" href="/latest-predictions">
+                Open Live Dashboard
+            </a>
+        </div>
+
+        <div class="status-grid">
+
+            <div class="status-box">
+                <div class="status-title">
+                    Risk Monitoring
+                </div>
+
+                <div class="status-value warning">
+                    Enabled
+                </div>
+            </div>
+
+            <div class="status-box">
+                <div class="status-title">
+                    Recommendation Engine
+                </div>
+
+                <div class="status-value healthy">
+                    Active
+                </div>
+            </div>
+
+            <div class="status-box">
+                <div class="status-title">
+                    History Logging
+                </div>
+
+                <div class="status-value healthy">
+                    Enabled
+                </div>
+            </div>
+
+            <div class="status-box">
+                <div class="status-title">
+                    Simulation Mode
+                </div>
+
+                <div class="status-value healthy">
+                    Ready
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Enterprise Direction</h2>
+
+        <p>
+            Current prototype direction supports future enterprise MES integration:
+        </p>
+
+        <ul class="target-list">
+            <li>Live MES / SCADA data connectors</li>
+            <li>PostgreSQL prediction traceability</li>
+            <li>Prediction drift monitoring</li>
+            <li>Model retraining governance</li>
+            <li>Operator recommendation workflows</li>
+            <li>Adaptive industrial thresholds</li>
+            <li>Process explainability dashboards</li>
+            <li>Multi-line deployment architecture</li>
+        </ul>
+
+        <div class="architecture-box">
+            Future roadmap includes production-safe deployment strategy,
+            shadow-mode validation,
+            process-aware recommendation governance,
+            and enterprise monitoring integration.
+        </div>
+
+    </div>
+
+</div>
+
+<div class="footer-note">
+    MDF1 ML Platform —
+    TrainingService + PredictionService + GUIService
+</div>
+
+</body>
+</html>

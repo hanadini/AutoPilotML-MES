@@ -1,0 +1,118 @@
+2026-05-14 08:44:44 | INFO | main | HTTP request started | method=GET | path=/docs
+2026-05-14 08:44:44 | INFO | main | HTTP request completed | method=GET | path=/docs | status_code=200 | duration_ms=13.53
+2026-05-14 08:44:44 | INFO | main | HTTP request started | method=GET | path=/openapi.json
+2026-05-14 08:44:44 | INFO | main | HTTP request completed | method=GET | path=/openapi.json | status_code=200 | duration_ms=2.87
+2026-05-14 08:44:57 | INFO | main | HTTP request started | method=GET | path=/docs
+2026-05-14 08:44:57 | INFO | main | HTTP request completed | method=GET | path=/docs | status_code=200 | duration_ms=1.67
+2026-05-14 08:44:57 | INFO | main | HTTP request started | method=GET | path=/openapi.json
+2026-05-14 08:44:57 | INFO | main | HTTP request completed | method=GET | path=/openapi.json | status_code=200 | duration_ms=1.23
+2026-05-14 08:45:35 | INFO | main | PredictionService startup initiated
+2026-05-14 08:45:35 | INFO | main | Creating/checking database tables...
+2026-05-14 08:45:35 | INFO | main | Database tables are ready
+2026-05-14 08:45:35 | INFO | main | Syncing artifacts from TrainingService...
+2026-05-14 08:45:35 | INFO | main | Artifact sync completed successfully
+2026-05-14 08:45:35 | INFO | main | Preloading models...
+2026-05-14 08:45:35 | INFO | service.model_registery | Loaded best model registry: C:\Users\edvazat\PycharmProjects\MDF1-MLtraining\PredictionService\artifacts\best_models_registry.json
+2026-05-14 08:45:35 | INFO | service.model_registery | Preloading single model | target=labDensityAverage | model=labDensityAverage_xgb_tuned_v2
+2026-05-14 10:48:36 | INFO | main | HTTP request started | method=GET | path=/docs
+2026-05-14 10:48:36 | INFO | main | HTTP request completed | method=GET | path=/docs | status_code=200 | duration_ms=3.61
+2026-05-14 10:48:36 | INFO | main | HTTP request started | method=GET | path=/openapi.json
+2026-05-14 10:48:36 | INFO | main | HTTP request completed | method=GET | path=/openapi.json | status_code=200 | duration_ms=1.66
+2026-05-14 11:09:11 | INFO | main | PredictionService startup initiated
+2026-05-14 11:09:11 | INFO | main | Creating/checking database tables...
+2026-05-14 11:09:11 | INFO | main | Database tables are ready
+2026-05-14 11:09:11 | INFO | main | Syncing artifacts from TrainingService...
+2026-05-14 11:09:11 | INFO | main | Artifact sync completed successfully
+2026-05-14 11:09:11 | INFO | main | Preloading models...
+2026-05-14 11:09:11 | INFO | service.model_registery | Loaded best model registry: C:\Users\edvazat\PycharmProjects\MDF1-MLtraining\PredictionService\artifacts\best_models_registry.json
+2026-05-14 11:09:11 | INFO | service.model_registery | Preloading single model | target=labDensityAverage | model=labDensityAverage_xgb_tuned_v2
+2026-05-14 11:11:01 | INFO | main | PredictionService startup initiated
+2026-05-14 11:11:01 | INFO | main | Creating/checking database tables...
+2026-05-14 11:11:02 | INFO | main | Database tables are ready
+2026-05-14 11:11:02 | INFO | main | Syncing artifacts from TrainingService...
+2026-05-14 11:11:02 | INFO | main | Artifact sync completed successfully
+2026-05-14 11:11:02 | INFO | main | Preloading models...
+2026-05-14 11:11:02 | INFO | service.model_registery | Loaded best model registry: C:\Users\edvazat\PycharmProjects\MDF1-MLtraining\PredictionService\artifacts\best_models_registry.json
+2026-05-14 11:11:02 | INFO | service.model_registery | Preloading single model | target=labDensityAverage | model=labDensityAverage_xgb_tuned_v2
+2026-05-14 12:10:21 | INFO | main | PredictionService startup initiated
+2026-05-14 12:10:21 | INFO | main | Creating/checking database tables...
+2026-05-14 12:10:21 | INFO | main | Database tables are ready
+2026-05-14 12:10:21 | INFO | main | Syncing artifacts from TrainingService...
+2026-05-14 12:10:21 | INFO | main | Artifact sync completed successfully
+2026-05-14 12:10:21 | INFO | main | Preloading models...
+2026-05-14 12:10:49 | INFO | main | HTTP request started | method=GET | path=/docs
+2026-05-14 12:10:49 | INFO | main | HTTP request completed | method=GET | path=/docs | status_code=200 | duration_ms=4.81
+2026-05-14 12:10:49 | INFO | main | HTTP request started | method=GET | path=/openapi.json
+2026-05-14 12:10:49 | INFO | main | HTTP request completed | method=GET | path=/openapi.json | status_code=200 | duration_ms=2.4
+2026-05-14 12:11:02 | INFO | main | HTTP request started | method=POST | path=/predict-all
+2026-05-14 12:11:02 | WARNING | service.feature_metadata | Could not detect expected columns in C:\Users\edvazat\PycharmProjects\MDF1-MLtraining\PredictionService\artifacts\labDensityAverage_xgb_tuned_v2\feature_importance.csv. Found columns: ['\ufefffeature', 'importance']
+2026-05-14 12:11:02 | WARNING | service.feature_metadata | Could not detect expected columns in C:\Users\edvazat\PycharmProjects\MDF1-MLtraining\PredictionService\artifacts\labBendingAvg_xgb_tuned_v2\feature_importance.csv. Found columns: ['\ufefffeature', 'importance']
+2026-05-14 12:11:02 | INFO | service.model_registery | Using cached model bundle: labDensityAverage_xgb_tuned_v2
+2026-05-14 12:11:02 | INFO | service.explainer | SHAP explanation generated | model=labDensityAverage_xgb_tuned_v2 | feature_count=28 | top_n=15
+2026-05-14 12:11:03 | INFO | api.predict_all | Predict-all target completed | target=labDensityAverage | prediction=754.7689819335938 | risk=MEDIUM | explanation_count=15 | recommendation_count=3
+2026-05-14 12:11:03 | INFO | service.model_registery | Using cached model bundle: labBendingAvg_xgb_tuned_v2
+2026-05-14 12:11:03 | INFO | service.model_registery | Using cached model bundle: labBendingAvg_rf_v2
+2026-05-14 12:11:03 | INFO | service.model_registery | Using cached model bundle: labBendingAvg_xgb_tuned_v2
+2026-05-14 12:11:03 | INFO | service.explainer | SHAP explanation generated | model=labBendingAvg_xgb_tuned_v2 | feature_count=28 | top_n=15
+2026-05-14 12:11:03 | INFO | api.predict_all | Predict-all target completed | target=labBendingAvg | prediction=34.5917589633208 | risk=MEDIUM | explanation_count=15 | recommendation_count=3
+2026-05-14 12:11:03 | INFO | api.predict_all | Predict-all completed | target_count=2 | duration_ms=1202.46
+2026-05-14 12:11:03 | INFO | main | HTTP request completed | method=POST | path=/predict-all | status_code=200 | duration_ms=1220.63
+2026-05-14 12:11:26 | INFO | main | HTTP request started | method=POST | path=/predict
+2026-05-14 12:11:26 | INFO | api.predict | Prediction request received | target=labDensityAverage
+2026-05-14 12:11:26 | INFO | service.model_registery | Using cached model bundle: labDensityAverage_xgb_tuned_v2
+2026-05-14 12:11:26 | WARNING | api.predict | Prediction request contains extra features | target=labDensityAverage | extra=['operCookingTime', 'operFibresDensity', 'operPressFibreDensity']
+2026-05-14 12:11:26 | INFO | api.predict | Prediction completed | target=labDensityAverage | model=labDensityAverage_xgb_tuned_v2 | algorithm=xgb | duration_ms=11.4
+2026-05-14 12:11:26 | INFO | main | HTTP request completed | method=POST | path=/predict | status_code=200 | duration_ms=17.31
+2026-05-14 12:11:29 | INFO | main | HTTP request started | method=POST | path=/predict
+2026-05-14 12:11:29 | INFO | api.predict | Prediction request received | target=labDensityAverage
+2026-05-14 12:11:29 | INFO | service.model_registery | Using cached model bundle: labDensityAverage_xgb_tuned_v2
+2026-05-14 12:11:29 | WARNING | api.predict | Prediction request contains extra features | target=labDensityAverage | extra=['operCookingTime', 'operFibresDensity', 'operPressFibreDensity']
+2026-05-14 12:11:29 | INFO | api.predict | Prediction completed | target=labDensityAverage | model=labDensityAverage_xgb_tuned_v2 | algorithm=xgb | duration_ms=8.53
+2026-05-14 12:11:29 | INFO | main | HTTP request completed | method=POST | path=/predict | status_code=200 | duration_ms=13.8
+2026-05-14 14:26:20 | INFO | main | HTTP request started | method=GET | path=/docs
+2026-05-14 14:26:20 | INFO | main | HTTP request completed | method=GET | path=/docs | status_code=200 | duration_ms=4.12
+2026-05-14 14:26:20 | INFO | main | HTTP request started | method=GET | path=/openapi.json
+2026-05-14 14:26:20 | INFO | main | HTTP request completed | method=GET | path=/openapi.json | status_code=200 | duration_ms=1.64
+2026-05-14 14:26:26 | INFO | main | HTTP request started | method=POST | path=/predict-all
+2026-05-14 14:26:26 | WARNING | service.feature_metadata | Could not detect expected columns in C:\Users\edvazat\PycharmProjects\MDF1-MLtraining\PredictionService\artifacts\labDensityAverage_xgb_tuned_v2\feature_importance.csv. Found columns: ['\ufefffeature', 'importance']
+2026-05-14 14:26:26 | WARNING | service.feature_metadata | Could not detect expected columns in C:\Users\edvazat\PycharmProjects\MDF1-MLtraining\PredictionService\artifacts\labBendingAvg_xgb_tuned_v2\feature_importance.csv. Found columns: ['\ufefffeature', 'importance']
+2026-05-14 14:26:26 | INFO | service.model_registery | Using cached model bundle: labDensityAverage_xgb_tuned_v2
+2026-05-14 14:26:26 | INFO | service.explainer | SHAP explanation generated | model=labDensityAverage_xgb_tuned_v2 | feature_count=28 | top_n=15
+2026-05-14 14:26:26 | INFO | api.predict_all | Predict-all target completed | target=labDensityAverage | prediction=754.7689819335938 | risk=MEDIUM | explanation_count=15 | recommendation_count=3
+2026-05-14 14:26:26 | INFO | service.model_registery | Using cached model bundle: labBendingAvg_xgb_tuned_v2
+2026-05-14 14:26:26 | INFO | service.model_registery | Using cached model bundle: labBendingAvg_rf_v2
+2026-05-14 14:26:27 | INFO | service.model_registery | Using cached model bundle: labBendingAvg_xgb_tuned_v2
+2026-05-14 14:26:27 | INFO | service.explainer | SHAP explanation generated | model=labBendingAvg_xgb_tuned_v2 | feature_count=28 | top_n=15
+2026-05-14 14:26:27 | INFO | api.predict_all | Predict-all target completed | target=labBendingAvg | prediction=34.5917589633208 | risk=MEDIUM | explanation_count=15 | recommendation_count=3
+2026-05-14 14:26:27 | INFO | api.predict_all | Predict-all completed | target_count=2 | duration_ms=873.24
+2026-05-14 14:26:27 | INFO | main | HTTP request completed | method=POST | path=/predict-all | status_code=200 | duration_ms=884.96
+2026-05-14 15:24:41 | INFO | main | HTTP request started | method=GET | path=/docs
+2026-05-14 15:24:41 | INFO | main | HTTP request completed | method=GET | path=/docs | status_code=200 | duration_ms=6.84
+2026-05-14 15:24:41 | INFO | main | HTTP request started | method=GET | path=/openapi.json
+2026-05-14 15:24:41 | INFO | main | HTTP request completed | method=GET | path=/openapi.json | status_code=200 | duration_ms=2.59
+2026-05-14 15:24:46 | INFO | main | HTTP request started | method=POST | path=/predict-all
+2026-05-14 15:24:46 | WARNING | service.feature_metadata | Could not detect expected columns in C:\Users\edvazat\PycharmProjects\MDF1-MLtraining\PredictionService\artifacts\labDensityAverage_xgb_tuned_v2\feature_importance.csv. Found columns: ['\ufefffeature', 'importance']
+2026-05-14 15:24:46 | WARNING | service.feature_metadata | Could not detect expected columns in C:\Users\edvazat\PycharmProjects\MDF1-MLtraining\PredictionService\artifacts\labBendingAvg_xgb_tuned_v2\feature_importance.csv. Found columns: ['\ufefffeature', 'importance']
+2026-05-14 15:24:46 | INFO | service.model_registery | Using cached model bundle: labDensityAverage_xgb_tuned_v2
+2026-05-14 15:24:47 | INFO | service.explainer | SHAP explanation generated | model=labDensityAverage_xgb_tuned_v2 | feature_count=28 | top_n=15
+2026-05-14 15:24:47 | INFO | api.predict_all | Predict-all target completed | target=labDensityAverage | prediction=754.7689819335938 | risk=MEDIUM | explanation_count=15 | recommendation_count=3
+2026-05-14 15:24:47 | INFO | service.model_registery | Using cached model bundle: labBendingAvg_xgb_tuned_v2
+2026-05-14 15:24:47 | INFO | service.model_registery | Using cached model bundle: labBendingAvg_rf_v2
+2026-05-14 15:24:47 | INFO | service.model_registery | Using cached model bundle: labBendingAvg_xgb_tuned_v2
+2026-05-14 15:24:47 | INFO | service.explainer | SHAP explanation generated | model=labBendingAvg_xgb_tuned_v2 | feature_count=28 | top_n=15
+2026-05-14 15:24:48 | INFO | api.predict_all | Predict-all target completed | target=labBendingAvg | prediction=34.5917589633208 | risk=MEDIUM | explanation_count=15 | recommendation_count=3
+2026-05-14 15:24:48 | INFO | api.predict_all | Predict-all completed | target_count=2 | duration_ms=1101.78
+2026-05-14 15:24:48 | INFO | main | HTTP request completed | method=POST | path=/predict-all | status_code=200 | duration_ms=1115.69
+2026-05-14 15:35:59 | INFO | main | HTTP request started | method=POST | path=/predict-all
+2026-05-14 15:35:59 | WARNING | service.feature_metadata | Could not detect expected columns in C:\Users\edvazat\PycharmProjects\MDF1-MLtraining\PredictionService\artifacts\labDensityAverage_xgb_tuned_v2\feature_importance.csv. Found columns: ['\ufefffeature', 'importance']
+2026-05-14 15:35:59 | WARNING | service.feature_metadata | Could not detect expected columns in C:\Users\edvazat\PycharmProjects\MDF1-MLtraining\PredictionService\artifacts\labBendingAvg_xgb_tuned_v2\feature_importance.csv. Found columns: ['\ufefffeature', 'importance']
+2026-05-14 15:35:59 | INFO | service.model_registery | Using cached model bundle: labDensityAverage_xgb_tuned_v2
+2026-05-14 15:35:59 | INFO | service.explainer | SHAP explanation generated | model=labDensityAverage_xgb_tuned_v2 | feature_count=28 | top_n=15
+2026-05-14 15:35:59 | INFO | api.predict_all | Predict-all target completed | target=labDensityAverage | prediction=754.7689819335938 | risk=MEDIUM | explanation_count=15 | recommendation_count=3
+2026-05-14 15:35:59 | INFO | service.model_registery | Using cached model bundle: labBendingAvg_xgb_tuned_v2
+2026-05-14 15:35:59 | INFO | service.model_registery | Using cached model bundle: labBendingAvg_rf_v2
+2026-05-14 15:36:00 | INFO | service.model_registery | Using cached model bundle: labBendingAvg_xgb_tuned_v2
+2026-05-14 15:36:00 | INFO | service.explainer | SHAP explanation generated | model=labBendingAvg_xgb_tuned_v2 | feature_count=28 | top_n=15
+2026-05-14 15:36:00 | INFO | api.predict_all | Predict-all target completed | target=labBendingAvg | prediction=34.5917589633208 | risk=MEDIUM | explanation_count=15 | recommendation_count=3
+2026-05-14 15:36:00 | INFO | api.predict_all | Predict-all completed | target_count=2 | duration_ms=1340.22
+2026-05-14 15:36:00 | INFO | main | HTTP request completed | method=POST | path=/predict-all | status_code=200 | duration_ms=1358.28

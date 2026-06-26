@@ -1,0 +1,16 @@
+{
+  "model_name": "labBendingAvg_xgb_tuned_v2",
+  "target_name": "labBendingAvg",
+  "algorithm": "xgb",
+  "feature_count": 30,
+  "training_timestamp": "2026-05-13T07:12:14.346091Z",
+  "notes": "MDF1 tuned XGBoost model with early stopping",
+  "pipeline_type": "single_target_regression",
+  "split_type": "time_based",
+  "forced_production_features": [
+    "operCookingTime",
+    "operFibresDensity",
+    "operPressFibreDensity",
+    "pressPressureMid_mean"
+  ]
+}

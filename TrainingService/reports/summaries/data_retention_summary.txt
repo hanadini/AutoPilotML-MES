@@ -1,0 +1,50 @@
+MDF1 DATA RETENTION ANALYSIS
+============================================================
+
+Initial rows: 4785
+Final rows before ML: 638
+Rows removed: 4147
+Retention rate: 13.33%
+Data loss rate: 86.67%
+
+TARGET AVAILABILITY
+------------------------------------------------------------
+Target: labDensityAverage
+  Available rows: 1117
+  Missing rows: 3668
+  Availability: 23.34%
+
+Target: labBendingAvg
+  Available rows: 1116
+  Missing rows: 3669
+  Availability: 23.32%
+
+Target: labEModulAvg
+  Available rows: 1116
+  Missing rows: 3669
+  Availability: 23.32%
+
+Target: labTensileAvg
+  Available rows: 1115
+  Missing rows: 3670
+  Availability: 23.3%
+
+Target: labSurfaceSoundnessAvg
+  Available rows: 1115
+  Missing rows: 3670
+  Availability: 23.3%
+
+TARGET COMBINATION AVAILABILITY
+------------------------------------------------------------
+Minimum targets available = 1: 1117 rows (23.34%)
+Minimum targets available = 2: 1116 rows (23.32%)
+Minimum targets available = 3: 1116 rows (23.32%)
+Minimum targets available = 4: 1115 rows (23.3%)
+Minimum targets available = 5: 1115 rows (23.3%)
+Minimum targets available = all_primary_targets: 1115 rows (23.3%)
+
+INTERPRETATION
+------------------------------------------------------------
+The final training dataset is limited mainly by laboratory target availability.
+If all primary targets are required simultaneously, only rows with complete target coverage can be used.
+For target-specific training, more rows may be usable by training each target independently.

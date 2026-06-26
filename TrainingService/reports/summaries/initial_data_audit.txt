@@ -1,0 +1,129 @@
+MDF1 INITIAL DATA AUDIT
+============================================================
+Rows: 638
+Columns: 1188
+
+Time column: baseProductionDate
+Min time: 2025-08-01 00:00:00
+Max time: 2026-06-03 10:22:02
+
+Primary targets summary:
+  Target: labDensityAverage
+    Non-null count: 638
+    Mean: 753.0817
+    Std: 61.1323
+    Min: 644.3000
+    Max: 916.5300
+
+  Target: labBendingAvg
+    Non-null count: 638
+    Mean: 33.9295
+    Std: 7.5765
+    Min: 22.5400
+    Max: 57.3600
+
+  Target: labEModulAvg
+    Non-null count: 638
+    Mean: 3425.8091
+    Std: 578.6614
+    Min: 2475.3700
+    Max: 5488.1000
+
+  Target: labTensileAvg
+    Non-null count: 638
+    Mean: 0.8923
+    Std: 0.4095
+    Min: 0.3600
+    Max: 2.1900
+
+  Target: labSurfaceSoundnessAvg
+    Non-null count: 638
+    Mean: 1.2500
+    Std: 0.2882
+    Min: 0.8000
+    Max: 2.8100
+
+Top 15 absolute correlations with target: labDensityAverage
+  - pressPressure1C: 0.8607
+  - pressPressure14R: 0.8537
+  - pressPressure14L: 0.8534
+  - pressPressure1R: 0.8381
+  - pressPressure1L: 0.8374
+  - pressPressure13C: 0.8266
+  - pressPressure11C: 0.8252
+  - pressPressure14C: 0.8124
+  - pressPressure21R: 0.8099
+  - pressPressure21L: 0.8090
+  - pressPressure12C: 0.8086
+  - pressPressure11R: 0.8073
+  - pressPressure15R: 0.8070
+  - pressPressure15L: 0.8068
+  - pressPressure11L: 0.8062
+
+Top 15 absolute correlations with target: labBendingAvg
+  - operPressSpeed: 0.8360
+  - pressPressure13C: 0.8343
+  - pressPressure11C: 0.8282
+  - pressPressure11R: 0.8164
+  - pressPressure12C: 0.8148
+  - pressPressure11L: 0.8145
+  - pressPressure14C: 0.8038
+  - pressPressure1C: 0.8029
+  - pressPressure14R: 0.7941
+  - pressPressure14L: 0.7926
+  - pressPressure12L: 0.7882
+  - pressPressure1R: 0.7799
+  - beltSpeed1: 0.7734
+  - pressPressure1L: 0.7725
+  - pressPressure10C: 0.7722
+
+Top 15 absolute correlations with target: labEModulAvg
+  - pressPressure1C: 0.8318
+  - pressPressure1R: 0.8201
+  - pressPressure1L: 0.8127
+  - thicknessClosed4: -0.8092
+  - thicknessClosed7: -0.8092
+  - pressLeadRightAct: -0.8090
+  - thicknessClosed3: -0.8089
+  - pressLeadLeftSet: -0.8088
+  - pressLeadLeftAct: -0.8087
+  - thicknessClosed6: -0.8086
+  - thicknessClosed2: -0.8081
+  - beltSpeed1: 0.7962
+  - operPressSpeed: 0.7948
+  - pressPressure13C: 0.7925
+  - actDistanceInfeedShaft: -0.7865
+
+Top 15 absolute correlations with target: labTensileAvg
+  - pressPressure11C: 0.7884
+  - pressPressure13C: 0.7818
+  - pressPressure14L: 0.7811
+  - pressPressure14R: 0.7810
+  - pressPressure11L: 0.7780
+  - pressPressure11R: 0.7778
+  - couplingFactor10L: 0.7673
+  - couplingFactor10R: 0.7673
+  - couplingFactor11R: 0.7673
+  - couplingFactor12R: 0.7673
+  - couplingFactor12L: 0.7673
+  - couplingFactor11L: 0.7673
+  - pressPressure12C: 0.7636
+  - pressPressure14C: 0.7591
+  - operPressSpeed: 0.7502
+
+Top 15 absolute correlations with target: labSurfaceSoundnessAvg
+  - pressPressure2C: -0.8162
+  - distance2: 0.7930
+  - pressPressure2R: -0.7626
+  - pressPressure2L: -0.7607
+  - operPressWeightOfMat: 0.5895
+  - thicknessClosed3: 0.5656
+  - thicknessClosed6: 0.5653
+  - thicknessClosed4: 0.5647
+  - thicknessClosed2: 0.5647
+  - thicknessClosed7: 0.5646
+  - actDistanceInfeedShaft: 0.5633
+  - pressLeadRightAct: 0.5625
+  - pressLeadLeftSet: 0.5621
+  - pressLeadLeftAct: 0.5621
+  - pressPressure6C: -0.5280

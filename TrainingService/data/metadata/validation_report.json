@@ -1,0 +1,1249 @@
+{
+  "dataset_shape": {
+    "rows": 4785,
+    "columns": 1165
+  },
+  "schema_checks": {
+    "missing_required_columns": [],
+    "missing_optional_features": [
+      "grindingSpeed",
+      "heatInletTemp"
+    ],
+    "duplicate_column_names": []
+  },
+  "time_column": {
+    "time_column_name": "baseProductionDate",
+    "parsed_non_null_count": 4785,
+    "parsed_null_count": 0
+  },
+  "id_checks": {
+    "id_columns": [
+      "labcut.id"
+    ],
+    "duplicate_id_count": 1251
+  },
+  "missingness": {
+    "primary_targets": [
+      "labDensityAverage",
+      "labBendingAvg",
+      "labEModulAvg",
+      "labTensileAvg",
+      "labSurfaceSoundnessAvg"
+    ],
+    "primary_target_missing_count": {
+      "labDensityAverage": 3668,
+      "labBendingAvg": 3669,
+      "labEModulAvg": 3669,
+      "labTensileAvg": 3670,
+      "labSurfaceSoundnessAvg": 3670
+    },
+    "feature_missing_ratios": {
+      "operPressFactor": 0.1053,
+      "operPressSpeed": 0.1053,
+      "operPressTemp1": 0.1055,
+      "operPressTemp2": 0.1055,
+      "operPressTemp3": 0.1055,
+      "operPressTemp4": 0.1055,
+      "operPressTemp5": 0.1055,
+      "sprayUp": 0.1432,
+      "pressLeadLeftAct": 0.1624,
+      "pressLeadRightAct": 0.1624,
+      "operBoardDensity": 0.1613,
+      "operWeightOfBoard": 0.1187,
+      "catcherRate": 0.1622,
+      "operPressFibreDensity": 0.1212,
+      "cookingPressure": 0.162,
+      "operFibrePreHeatTemp": 0.162,
+      "operCookingTime": 0.162,
+      "distance1": 0.1624,
+      "distance10": 0.1438,
+      "distance11": 0.1624,
+      "distance12": 0.1624,
+      "distance13": 0.1438,
+      "distance14": 0.1624,
+      "distance15": 0.1624,
+      "distance16": 0.1624,
+      "distance17": 0.1624,
+      "distance18": 0.1438,
+      "distance19": 0.1624,
+      "distance2": 0.1438,
+      "distance20": 0.1624,
+      "distance21": 0.1438,
+      "distance3": 0.1624,
+      "distance4": 0.1438,
+      "distance5": 0.1438,
+      "distance6": 0.1624,
+      "distance7": 0.1624,
+      "distance8": 0.1624,
+      "distance9": 0.1624,
+      "couplingFactor1L": 0.1624,
+      "couplingFactor10L": 0.1624,
+      "couplingFactor11L": 0.1624,
+      "couplingFactor12L": 0.1624,
+      "couplingFactor13L": 0.1438,
+      "couplingFactor14L": 0.1438,
+      "couplingFactor15L": 0.1438,
+      "couplingFactor16L": 0.1438,
+      "couplingFactor17L": 0.1438,
+      "couplingFactor18L": 0.1624,
+      "couplingFactor19L": 0.1438,
+      "couplingFactor2L": 0.1624,
+      "couplingFactor20L": 0.1624,
+      "couplingFactor21L": 0.1624,
+      "couplingFactor3L": 0.1624,
+      "couplingFactor4L": 0.1624,
+      "couplingFactor5L": 0.1438,
+      "couplingFactor6L": 0.1624,
+      "couplingFactor7L": 0.1624,
+      "couplingFactor8L": 0.1624,
+      "couplingFactor9L": 0.1624,
+      "couplingFactor1R": 0.1624,
+      "couplingFactor10R": 0.1624,
+      "couplingFactor11R": 0.1624,
+      "couplingFactor12R": 0.1624,
+      "couplingFactor13R": 0.1624,
+      "couplingFactor14R": 0.1438,
+      "couplingFactor15R": 0.1438,
+      "couplingFactor16R": 0.1624,
+      "couplingFactor17R": 0.1624,
+      "couplingFactor18R": 0.1438,
+      "couplingFactor19R": 0.1624,
+      "couplingFactor2R": 0.1438,
+      "couplingFactor20R": 0.1438,
+      "couplingFactor21R": 0.1624,
+      "couplingFactor3R": 0.1624,
+      "couplingFactor4R": 0.1624,
+      "couplingFactor5R": 0.1624,
+      "couplingFactor6R": 0.1624,
+      "couplingFactor7R": 0.1438,
+      "couplingFactor8R": 0.1438,
+      "couplingFactor9R": 0.1624,
+      "dischargeSpeed": 0.162,
+      "drier1TempOut": 0.162,
+      "fibersHumidityAfterDryer": 0.162,
+      "operFibres": 0.1432,
+      "operFibresDensity": 0.7774,
+      "operFibreTemp": 0.162,
+      "beltSpeed1": 0.162,
+      "operGlue1": 0.1432,
+      "pressHotPlateTemp1": 0.162,
+      "pressHotPlateTemp2": 0.1432,
+      "pressHotPlateTemp3": 0.162,
+      "pressHotPlateTemp4": 0.162,
+      "pressHotPlateTemp5": 0.162,
+      "operGlue2": 0.9538,
+      "operMatTemp": 0.1432,
+      "operSteamBottom": 0.7559,
+      "pressLeadLeftSet": 0.1624,
+      "pressPressure1L": 0.1613,
+      "pressPressure10L": 0.1613,
+      "pressPressure11L": 0.1624,
+      "pressPressure12L": 0.1624,
+      "pressPressure13L": 0.1613,
+      "pressPressure14L": 0.1427,
+      "pressPressure15L": 0.1624,
+      "pressPressure16L": 0.1613,
+      "pressPressure17L": 0.1624,
+      "pressPressure18L": 0.1613,
+      "pressPressure19L": 0.1613,
+      "pressPressure2L": 0.1613,
+      "pressPressure20L": 0.1613,
+      "pressPressure21L": 0.1613,
+      "pressPressure3L": 0.1624,
+      "pressPressure4L": 0.1613,
+      "pressPressure5L": 0.1613,
+      "pressPressure6L": 0.1427,
+      "pressPressure7L": 0.1613,
+      "pressPressure8L": 0.1624,
+      "pressPressure9L": 0.1624,
+      "pressPressure1C": 0.1613,
+      "pressPressure10C": 0.1624,
+      "pressPressure11C": 0.1427,
+      "pressPressure12C": 0.1624,
+      "pressPressure13C": 0.1613,
+      "pressPressure14C": 0.1613,
+      "pressPressure15C": 0.1624,
+      "pressPressure16C": 0.1624,
+      "pressPressure17C": 0.1427,
+      "pressPressure18C": 0.1624,
+      "pressPressure19C": 0.1613,
+      "pressPressure2C": 0.1613,
+      "pressPressure20C": 0.1624,
+      "pressPressure21C": 0.1427,
+      "pressPressure3C": 0.1427,
+      "pressPressure4C": 0.1613,
+      "pressPressure5C": 0.1613,
+      "pressPressure6C": 0.1427,
+      "pressPressure7C": 0.1427,
+      "pressPressure8C": 0.1624,
+      "pressPressure9C": 0.1624,
+      "pressPressure1R": 0.1613,
+      "pressPressure10R": 0.1427,
+      "pressPressure11R": 0.1624,
+      "pressPressure12R": 0.1427,
+      "pressPressure13R": 0.1613,
+      "pressPressure14R": 0.1427,
+      "pressPressure15R": 0.1613,
+      "pressPressure16R": 0.1613,
+      "pressPressure17R": 0.1613,
+      "pressPressure18R": 0.1427,
+      "pressPressure19R": 0.1613,
+      "pressPressure2R": 0.1624,
+      "pressPressure20R": 0.1613,
+      "pressPressure21R": 0.1427,
+      "pressPressure3R": 0.1613,
+      "pressPressure4R": 0.1427,
+      "pressPressure5R": 0.1613,
+      "pressPressure6R": 0.1624,
+      "pressPressure7R": 0.1427,
+      "pressPressure8R": 0.1427,
+      "pressPressure9R": 0.1427,
+      "operSteamPreHeat": 0.162,
+      "operRefTempInDrying": 0.1532,
+      "operRefTempOutDrying": 0.1532,
+      "thicknessClosed1": 0.7534,
+      "thicknessClosed2": 0.1613,
+      "thicknessClosed3": 0.1613,
+      "thicknessClosed4": 0.1613,
+      "thicknessClosed5": 0.1613,
+      "thicknessClosed6": 0.1613,
+      "thicknessClosed7": 0.1613,
+      "operPressWeightOfMat": 0.1521,
+      "actDistanceInfeedShaft": 0.1624,
+      "operEmulsion": 0.1534,
+      "operBlowHardener": 0.1622,
+      "operRefLeafTimber": 0.1147,
+      "operRefConiferTimber": 0.0959,
+      "operPressFibresMoisture": 0.1532
+    },
+    "target_missing_ratios": {
+      "labBendingAvg": 0.7668,
+      "labEModulAvg": 0.7668,
+      "labTensileAvg": 0.767,
+      "labSurfaceSoundnessAvg": 0.767,
+      "labDensityAverage": 0.7666
+    },
+    "high_missing_feature_columns": [
+      "operFibresDensity",
+      "operGlue2",
+      "operSteamBottom",
+      "thicknessClosed1"
+    ]
+  },
+  "numeric_conversion": {
+    "features": {
+      "operPressFactor": {
+        "raw_non_null": 4281,
+        "numeric_non_null": 4281,
+        "non_numeric_count": 0
+      },
+      "operPressSpeed": {
+        "raw_non_null": 4281,
+        "numeric_non_null": 4281,
+        "non_numeric_count": 0
+      },
+      "operPressTemp1": {
+        "raw_non_null": 4280,
+        "numeric_non_null": 4280,
+        "non_numeric_count": 0
+      },
+      "operPressTemp2": {
+        "raw_non_null": 4280,
+        "numeric_non_null": 4280,
+        "non_numeric_count": 0
+      },
+      "operPressTemp3": {
+        "raw_non_null": 4280,
+        "numeric_non_null": 4280,
+        "non_numeric_count": 0
+      },
+      "operPressTemp4": {
+        "raw_non_null": 4280,
+        "numeric_non_null": 4280,
+        "non_numeric_count": 0
+      },
+      "operPressTemp5": {
+        "raw_non_null": 4280,
+        "numeric_non_null": 4280,
+        "non_numeric_count": 0
+      },
+      "sprayUp": {
+        "raw_non_null": 4100,
+        "numeric_non_null": 4100,
+        "non_numeric_count": 0
+      },
+      "pressLeadLeftAct": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressLeadRightAct": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "operBoardDensity": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "operWeightOfBoard": {
+        "raw_non_null": 4217,
+        "numeric_non_null": 4217,
+        "non_numeric_count": 0
+      },
+      "catcherRate": {
+        "raw_non_null": 4009,
+        "numeric_non_null": 4009,
+        "non_numeric_count": 0
+      },
+      "operPressFibreDensity": {
+        "raw_non_null": 4205,
+        "numeric_non_null": 4205,
+        "non_numeric_count": 0
+      },
+      "cookingPressure": {
+        "raw_non_null": 4010,
+        "numeric_non_null": 4010,
+        "non_numeric_count": 0
+      },
+      "operFibrePreHeatTemp": {
+        "raw_non_null": 4010,
+        "numeric_non_null": 4010,
+        "non_numeric_count": 0
+      },
+      "operCookingTime": {
+        "raw_non_null": 4010,
+        "numeric_non_null": 4010,
+        "non_numeric_count": 0
+      },
+      "distance1": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "distance10": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "distance11": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "distance12": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "distance13": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "distance14": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "distance15": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "distance16": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "distance17": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "distance18": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "distance19": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "distance2": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "distance20": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "distance21": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "distance3": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "distance4": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "distance5": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "distance6": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "distance7": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "distance8": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "distance9": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor1L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor10L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor11L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor12L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor13L": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "couplingFactor14L": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "couplingFactor15L": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "couplingFactor16L": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "couplingFactor17L": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "couplingFactor18L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor19L": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "couplingFactor2L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor20L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor21L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor3L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor4L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor5L": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "couplingFactor6L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor7L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor8L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor9L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor1R": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor10R": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor11R": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor12R": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor13R": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor14R": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "couplingFactor15R": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "couplingFactor16R": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor17R": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor18R": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "couplingFactor19R": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor2R": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "couplingFactor20R": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "couplingFactor21R": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor3R": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor4R": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor5R": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor6R": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "couplingFactor7R": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "couplingFactor8R": {
+        "raw_non_null": 4097,
+        "numeric_non_null": 4097,
+        "non_numeric_count": 0
+      },
+      "couplingFactor9R": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "dischargeSpeed": {
+        "raw_non_null": 4010,
+        "numeric_non_null": 4010,
+        "non_numeric_count": 0
+      },
+      "drier1TempOut": {
+        "raw_non_null": 4010,
+        "numeric_non_null": 4010,
+        "non_numeric_count": 0
+      },
+      "fibersHumidityAfterDryer": {
+        "raw_non_null": 4010,
+        "numeric_non_null": 4010,
+        "non_numeric_count": 0
+      },
+      "operFibres": {
+        "raw_non_null": 4100,
+        "numeric_non_null": 4100,
+        "non_numeric_count": 0
+      },
+      "operFibresDensity": {
+        "raw_non_null": 1065,
+        "numeric_non_null": 1065,
+        "non_numeric_count": 0
+      },
+      "operFibreTemp": {
+        "raw_non_null": 4010,
+        "numeric_non_null": 4010,
+        "non_numeric_count": 0
+      },
+      "beltSpeed1": {
+        "raw_non_null": 4010,
+        "numeric_non_null": 4010,
+        "non_numeric_count": 0
+      },
+      "operGlue1": {
+        "raw_non_null": 4100,
+        "numeric_non_null": 4100,
+        "non_numeric_count": 0
+      },
+      "pressHotPlateTemp1": {
+        "raw_non_null": 4010,
+        "numeric_non_null": 4010,
+        "non_numeric_count": 0
+      },
+      "pressHotPlateTemp2": {
+        "raw_non_null": 4100,
+        "numeric_non_null": 4100,
+        "non_numeric_count": 0
+      },
+      "pressHotPlateTemp3": {
+        "raw_non_null": 4010,
+        "numeric_non_null": 4010,
+        "non_numeric_count": 0
+      },
+      "pressHotPlateTemp4": {
+        "raw_non_null": 4010,
+        "numeric_non_null": 4010,
+        "non_numeric_count": 0
+      },
+      "pressHotPlateTemp5": {
+        "raw_non_null": 4010,
+        "numeric_non_null": 4010,
+        "non_numeric_count": 0
+      },
+      "operGlue2": {
+        "raw_non_null": 221,
+        "numeric_non_null": 221,
+        "non_numeric_count": 0
+      },
+      "operMatTemp": {
+        "raw_non_null": 4100,
+        "numeric_non_null": 4100,
+        "non_numeric_count": 0
+      },
+      "operSteamBottom": {
+        "raw_non_null": 1168,
+        "numeric_non_null": 1168,
+        "non_numeric_count": 0
+      },
+      "pressLeadLeftSet": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure1L": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure10L": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure11L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure12L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure13L": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure14L": {
+        "raw_non_null": 4102,
+        "numeric_non_null": 4102,
+        "non_numeric_count": 0
+      },
+      "pressPressure15L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure16L": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure17L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure18L": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure19L": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure2L": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure20L": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure21L": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure3L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure4L": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure5L": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure6L": {
+        "raw_non_null": 4102,
+        "numeric_non_null": 4102,
+        "non_numeric_count": 0
+      },
+      "pressPressure7L": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure8L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure9L": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure1C": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure10C": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure11C": {
+        "raw_non_null": 4102,
+        "numeric_non_null": 4102,
+        "non_numeric_count": 0
+      },
+      "pressPressure12C": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure13C": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure14C": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure15C": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure16C": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure17C": {
+        "raw_non_null": 4102,
+        "numeric_non_null": 4102,
+        "non_numeric_count": 0
+      },
+      "pressPressure18C": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure19C": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure2C": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure20C": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure21C": {
+        "raw_non_null": 4102,
+        "numeric_non_null": 4102,
+        "non_numeric_count": 0
+      },
+      "pressPressure3C": {
+        "raw_non_null": 4102,
+        "numeric_non_null": 4102,
+        "non_numeric_count": 0
+      },
+      "pressPressure4C": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure5C": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure6C": {
+        "raw_non_null": 4102,
+        "numeric_non_null": 4102,
+        "non_numeric_count": 0
+      },
+      "pressPressure7C": {
+        "raw_non_null": 4102,
+        "numeric_non_null": 4102,
+        "non_numeric_count": 0
+      },
+      "pressPressure8C": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure9C": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure1R": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure10R": {
+        "raw_non_null": 4102,
+        "numeric_non_null": 4102,
+        "non_numeric_count": 0
+      },
+      "pressPressure11R": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure12R": {
+        "raw_non_null": 4102,
+        "numeric_non_null": 4102,
+        "non_numeric_count": 0
+      },
+      "pressPressure13R": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure14R": {
+        "raw_non_null": 4102,
+        "numeric_non_null": 4102,
+        "non_numeric_count": 0
+      },
+      "pressPressure15R": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure16R": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure17R": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure18R": {
+        "raw_non_null": 4102,
+        "numeric_non_null": 4102,
+        "non_numeric_count": 0
+      },
+      "pressPressure19R": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure2R": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure20R": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure21R": {
+        "raw_non_null": 4102,
+        "numeric_non_null": 4102,
+        "non_numeric_count": 0
+      },
+      "pressPressure3R": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure4R": {
+        "raw_non_null": 4102,
+        "numeric_non_null": 4102,
+        "non_numeric_count": 0
+      },
+      "pressPressure5R": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "pressPressure6R": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "pressPressure7R": {
+        "raw_non_null": 4102,
+        "numeric_non_null": 4102,
+        "non_numeric_count": 0
+      },
+      "pressPressure8R": {
+        "raw_non_null": 4102,
+        "numeric_non_null": 4102,
+        "non_numeric_count": 0
+      },
+      "pressPressure9R": {
+        "raw_non_null": 4102,
+        "numeric_non_null": 4102,
+        "non_numeric_count": 0
+      },
+      "operSteamPreHeat": {
+        "raw_non_null": 4010,
+        "numeric_non_null": 4010,
+        "non_numeric_count": 0
+      },
+      "operRefTempInDrying": {
+        "raw_non_null": 4052,
+        "numeric_non_null": 4052,
+        "non_numeric_count": 0
+      },
+      "operRefTempOutDrying": {
+        "raw_non_null": 4052,
+        "numeric_non_null": 4052,
+        "non_numeric_count": 0
+      },
+      "thicknessClosed1": {
+        "raw_non_null": 1180,
+        "numeric_non_null": 1180,
+        "non_numeric_count": 0
+      },
+      "thicknessClosed2": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "thicknessClosed3": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "thicknessClosed4": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "thicknessClosed5": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "thicknessClosed6": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "thicknessClosed7": {
+        "raw_non_null": 4013,
+        "numeric_non_null": 4013,
+        "non_numeric_count": 0
+      },
+      "operPressWeightOfMat": {
+        "raw_non_null": 4057,
+        "numeric_non_null": 4057,
+        "non_numeric_count": 0
+      },
+      "actDistanceInfeedShaft": {
+        "raw_non_null": 4008,
+        "numeric_non_null": 4008,
+        "non_numeric_count": 0
+      },
+      "operEmulsion": {
+        "raw_non_null": 4051,
+        "numeric_non_null": 4051,
+        "non_numeric_count": 0
+      },
+      "operBlowHardener": {
+        "raw_non_null": 4009,
+        "numeric_non_null": 4009,
+        "non_numeric_count": 0
+      },
+      "operRefLeafTimber": {
+        "raw_non_null": 4236,
+        "numeric_non_null": 4236,
+        "non_numeric_count": 0
+      },
+      "operRefConiferTimber": {
+        "raw_non_null": 4326,
+        "numeric_non_null": 4326,
+        "non_numeric_count": 0
+      },
+      "operPressFibresMoisture": {
+        "raw_non_null": 4052,
+        "numeric_non_null": 4052,
+        "non_numeric_count": 0
+      }
+    },
+    "targets": {
+      "labBendingAvg": {
+        "raw_non_null": 1116,
+        "numeric_non_null": 1116,
+        "non_numeric_count": 0
+      },
+      "labEModulAvg": {
+        "raw_non_null": 1116,
+        "numeric_non_null": 1116,
+        "non_numeric_count": 0
+      },
+      "labTensileAvg": {
+        "raw_non_null": 1115,
+        "numeric_non_null": 1115,
+        "non_numeric_count": 0
+      },
+      "labSurfaceSoundnessAvg": {
+        "raw_non_null": 1115,
+        "numeric_non_null": 1115,
+        "non_numeric_count": 0
+      },
+      "labDensityAverage": {
+        "raw_non_null": 1117,
+        "numeric_non_null": 1117,
+        "non_numeric_count": 0
+      }
+    }
+  },
+  "domain_validation": {
+    "percentage_range_violations": {
+      "fibersHumidityAfterDryer": 0,
+      "operPressFibresMoisture": 0,
+      "catcherRate": 0
+    },
+    "negative_value_violations": {
+      "operBoardDensity": 0,
+      "labDensityAverage": 0,
+      "operFibresDensity": 0,
+      "operPressFibreDensity": 0,
+      "operFibrePreHeatTemp": 0,
+      "drier1TempOut": 0,
+      "operMatTemp": 0,
+      "operRefTempInDrying": 0,
+      "operRefTempOutDrying": 0,
+      "cookingPressure": 0,
+      "operSteamBottom": 0,
+      "operSteamPreHeat": 5,
+      "fibersHumidityAfterDryer": 0,
+      "operPressFibresMoisture": 0,
+      "operWeightOfBoard": 0,
+      "operPressWeightOfMat": 0,
+      "operFibres": 0,
+      "couplingFactor1L": 0,
+      "couplingFactor2L": 0,
+      "couplingFactor3L": 0,
+      "couplingFactor4L": 0,
+      "couplingFactor5L": 0,
+      "couplingFactor6L": 0,
+      "couplingFactor7L": 0,
+      "couplingFactor8L": 0,
+      "couplingFactor9L": 0,
+      "couplingFactor10L": 0,
+      "couplingFactor11L": 0,
+      "couplingFactor12L": 0,
+      "couplingFactor13L": 0,
+      "couplingFactor14L": 0,
+      "couplingFactor15L": 0,
+      "couplingFactor16L": 0,
+      "couplingFactor17L": 0,
+      "couplingFactor18L": 0,
+      "couplingFactor19L": 0,
+      "couplingFactor20L": 0,
+      "couplingFactor21L": 0,
+      "couplingFactor1R": 0,
+      "couplingFactor2R": 0,
+      "couplingFactor3R": 0,
+      "couplingFactor4R": 0,
+      "couplingFactor5R": 0,
+      "couplingFactor6R": 0,
+      "couplingFactor7R": 0,
+      "couplingFactor8R": 0,
+      "couplingFactor9R": 0,
+      "couplingFactor10R": 0,
+      "couplingFactor11R": 0,
+      "couplingFactor12R": 0,
+      "couplingFactor13R": 0,
+      "couplingFactor14R": 0,
+      "couplingFactor15R": 0,
+      "couplingFactor16R": 0,
+      "couplingFactor17R": 0,
+      "couplingFactor18R": 0,
+      "couplingFactor19R": 0,
+      "couplingFactor20R": 0,
+      "couplingFactor21R": 0
+    },
+    "constant_feature_columns": [
+      "distance10",
+      "distance11",
+      "distance12",
+      "distance13",
+      "distance14",
+      "distance15",
+      "distance21",
+      "distance3",
+      "distance4",
+      "distance5",
+      "distance6",
+      "distance7",
+      "distance8",
+      "distance9",
+      "couplingFactor1L",
+      "couplingFactor16L",
+      "couplingFactor17L",
+      "couplingFactor18L",
+      "couplingFactor19L",
+      "couplingFactor20L",
+      "couplingFactor1R",
+      "couplingFactor16R",
+      "couplingFactor17R",
+      "couplingFactor18R",
+      "couplingFactor19R",
+      "couplingFactor20R"
+    ]
+  },
+  "cleaning_policy": {
+    "drop_rows_with_missing_primary_target": true,
+    "max_missing_ratio_per_feature": 0.4
+  }
+}
